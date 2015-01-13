@@ -1,0 +1,97 @@
+.layer-280 [zoom>=6][zoom<=13][size=12.2][desc_code='METR'], 
+.layer-280 [zoom>=6][zoom<=13][size=12.2][desc_code='TOWN'],
+.layer-280 [zoom>=6][zoom<=13][size=12.2][desc_code='POPL'], 
+.layer-280 [zoom>=6][zoom<=13][size=12.2][desc_code='LOC'],
+.layer-280 [zoom>=6][zoom<=13][size=12.2][desc_code='USAT'],
+.layer-280 [zoom>=6][zoom<=13][size=12.2][desc_code='SBRB']
+{
+  text-name: [name];
+  text-face-name: 'FreeSans Medium';
+  text-size: 18.0;
+  text-fill: #FDFCED;
+  text-transform: capitalize;  
+  text-character-spacing:2.5;
+  text-halo-fill: #555555;
+  text-halo-radius: 1.5;
+  text-placement-type: simple;
+}
+
+.layer-280 [zoom>=7][zoom<=17][size=9.5][desc_code='METR'], 
+.layer-280 [zoom>=7][zoom<=17][size=9.5][desc_code='TOWN'],
+.layer-280 [zoom>=7][zoom<=17][size=9.5][desc_code='POPL'],
+.layer-280 [zoom>=7][zoom<=17][size=9.5][desc_code='LOC'],
+.layer-280 [zoom>=7][zoom<=17][size=9.5][desc_code='USAT'],
+.layer-280 [zoom>=7][zoom<=17][size=9.5][desc_code='SBRB']
+{
+  text-name: [name];
+  text-face-name: 'FreeSans Medium';
+  text-size: 12.0;
+  text-fill: #FDFCED;
+  text-transform: capitalize;  
+  text-character-spacing: 1.5;
+  text-halo-fill: #555555;
+  text-halo-radius: 1.5;
+  text-placement-type: simple;
+  [zoom>=14]{text-size: 14.0;}
+  [zoom>=15]{text-size: 16.0;}
+}
+
+.layer-280 [zoom>=9][zoom<=17][size<=8.2][size>=7.5][desc_code='METR'], 
+.layer-280 [zoom>=9][zoom<=17][size<=8.2][size>=7.5][desc_code='TOWN'],
+.layer-280 [zoom>=9][zoom<=17][size<=8.2][size>=7.5][desc_code='POPL'],
+.layer-280 [zoom>=9][zoom<=17][size<=8.2][size>=7.5][desc_code='LOC'],
+.layer-280 [zoom>=9][zoom<=17][size<=8.2][size>=7.5][desc_code='USAT'],
+.layer-280 [zoom>=9][zoom<=17][size<=8.2][size>=7.5][desc_code='SBRB']
+{
+  text-name: [name];
+  text-face-name: 'FreeSans Medium';
+  text-size: 12.0;
+  text-fill: #FDFCED;
+  text-transform: capitalize;  
+  text-character-spacing: 1;
+  text-halo-fill: #555555;
+  text-halo-radius: 1.5;
+  text-placement-type: simple;
+  [zoom>=14]{text-size: 14.0;}
+  [zoom>=15]{text-size: 16.0;}
+}
+
+.layer-280 [zoom>=10][zoom<=17][size<=6.8][size>=6.1][desc_code='METR'], 
+.layer-280 [zoom>=10][zoom<=17][size<=6.8][size>=6.1][desc_code='TOWN'],
+.layer-280 [zoom>=10][zoom<=17][size<=6.8][size>=6.1][desc_code='POPL'], 
+.layer-280 [zoom>=10][zoom<=17][size<=6.8][size>=6.1][desc_code='LOC'],
+.layer-280 [zoom>=10][zoom<=17][size<=6.8][size>=6.1][desc_code='USAT'],
+.layer-280 [zoom>=10][zoom<=17][size<=6.8][size>=6.1][desc_code='SBRB']
+{
+  text-name: [name];
+  text-face-name: 'FreeSans Medium';
+  text-size: 9.0;
+  text-fill: #FDFCED;
+  text-transform: capitalize;  
+  text-character-spacing: 1;
+  text-halo-fill: #555555;
+  text-halo-radius: 1.5;
+  text-placement-type: simple;
+  [zoom>=12]{text-size: 11.0;}
+  [zoom>=15]{text-size: 14.0;}
+}
+
+.layer-280 [zoom>=14][zoom<=17][size<=5.5][desc_code='METR'], 
+.layer-280 [zoom>=14][zoom<=17][size<=5.5][desc_code='TOWN'],
+.layer-280 [zoom>=14][zoom<=17][size<=5.5][desc_code='POPL'], 
+.layer-280 [zoom>=14][zoom<=17][size<=5.5][desc_code='LOC'],
+.layer-280 [zoom>=14][zoom<=17][size<=5.5][desc_code='USAT'],
+.layer-280 [zoom>=14][zoom<=17][size<=5.5][desc_code='SBRB']
+{
+  text-name: [name];
+  text-face-name: 'FreeSans Medium';
+  text-size: 9.0;
+  text-fill: #FDFCED;
+  text-transform: capitalize;  
+  text-character-spacing: 1;
+  text-halo-fill: #555555;
+  text-halo-radius: 1.5;
+  text-placement-type: simple;
+  [zoom>=12]{text-size: 11.0;}
+  [zoom>=15]{text-size: 14.0;}
+}

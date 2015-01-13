@@ -1,0 +1,607 @@
+{
+  "bounds": [
+    165.8771,
+    -47.6727,
+    179.0167,
+    -33.6968
+  ],
+  "center": [
+    174.0784,
+    -40.872,
+    7
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 20,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "Landcover",
+    "Infrastructure"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        -178.82651554599963,
+        -52.62088112799993,
+        179.31665619999998,
+        -7.2999999999999785
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT gid, \"drval2\", ST_Force2D(geom) as geom FROM topo.bathy_nogap_noz) AS  Bathy_Temp",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19906876.6509161,-6913176.78084885,19961438.8589365,-814839.832600704",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds"
+      },
+      "id": "giddrval2stforce2dge",
+      "class": "layer-2022",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "giddrval2stforce2dge"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -178.82651554599963,
+        -52.62088112799993,
+        179.0677941370002,
+        -29.231341718999982
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.\"nz-coastlines-and-islands_3857\") AS Coastline",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19906876.6509161,-6913176.78084885,19933735.6608056,-3405123.7317536",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds",
+        "id": "Coastline",
+        "project": "Colour_Redux_PlaceNames",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "Coastline",
+      "class": "layer-1153",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Coastline"
+    },
+    {
+      "geometry": "raster",
+      "extent": [
+        165.68321182334313,
+        -47.45205306819986,
+        178.3798356695757,
+        -33.98965334397216
+      ],
+      "id": "nzdemall",
+      "class": "layer-1768-band-1",
+      "Datasource": {
+        "file": "/home/ireese/share/Data_BackUp/Geographx_NZ_DEM_Edited/NZ_DEM_Originals/NZ_DEM_All.vrt",
+        "band": "1"
+      },
+      "layer": null,
+      "srs-name": "custom",
+      "srs": "+proj=tmerc +lat_0=0 +lon_0=173 +k=0.9996 +x_0=1600000 +y_0=10000000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs ",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "nzdemall"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        166.559555849133,
+        -47.25462479194013,
+        178.49931749785694,
+        -34.41694243051145
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.swamp_poly) AS Swamp_Topo",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18541324.9438793,-5983734.80584163,19870453.1308083,-4084925.5553106",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds"
+      },
+      "id": "Swamp_Topo",
+      "class": "layer-359",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Swamp_Topo"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        166.4261493316618,
+        -47.290000518688544,
+        178.57815122755926,
+        -34.12956558961472
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.\"lcdb-v33-land-cover-database-version-33\") AS LCDB",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18526474.1982859,-5989538.67116455,19879228.8614561,-4046212.81578627",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds",
+        "id": "LCDB",
+        "project": "Colour_Redux",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "LCDB",
+      "class": "layer-2021",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "LCDB"
+    },
+    {
+      "extent": [
+        -177.3579020166995,
+        -47.73474823236123,
+        178.80482406669987,
+        -34.00369429912487
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM lds.all_parcels) AS Parcels",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19743391.3406623,-6062839.29345156,19904461.9664859,-4029298.09103461",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds",
+        "id": "Parcels",
+        "project": "Colour_GenTwo_Working_II",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "Parcels",
+      "class": "layer-1571",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Parcels"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        166.53277276868545,
+        -46.96667291558243,
+        178.4830790592015,
+        -34.524780437293295
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.shingle_poly) AS Shingle",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18538343.465002,-5936635.93957009,19868645.4760859,-4099486.77511968",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds"
+      },
+      "id": "Shingle",
+      "class": "layer-342",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Shingle"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        166.43439763214232,
+        -47.28307650809587,
+        178.5429517006204,
+        -34.1459979345268
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.river_cl) AS River_CL",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18527392.3948953,-5988402.38837909,19875310.4680411,-4048422.86938495",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds",
+        "id": "River_CL",
+        "project": "Colour_Redux_PlaceNames",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "River_CL",
+      "class": "layer-327",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "River_CL"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        166.43314184149682,
+        -47.131832331051726,
+        178.54619680056314,
+        -34.421783481425145
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.river_poly) AS River_Poly",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18527252.6009201,-5963619.07456831,19875671.7109143,-4085578.83281062",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds",
+        "id": "River_Poly",
+        "project": "Colour_Redux_PlaceNames",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "River_Poly",
+      "class": "layer-328",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "River_Poly"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        166.49004299017673,
+        -47.268131837450184,
+        178.54245504325243,
+        -34.42503968951874
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.lake_poly) AS Lakes\n",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18533586.8078167,-5985950.36109904,19875255.1803958,-4086018.26435684",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds",
+        "id": "Lakes",
+        "project": "Colour_Redux",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "Lakes",
+      "class": "layer-293",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Lakes"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        166.42799529854895,
+        -47.29092383139343,
+        178.57802981024136,
+        -34.12924072245959
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.rock_poly) AS Rock_Topo",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18526679.6903798,-5989690.20504027,19879215.3453421,-4046169.12739895",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds"
+      },
+      "id": "Rock_Topo",
+      "class": "layer-332",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Rock_Topo"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        167.57397934056013,
+        -46.90120745409252,
+        178.4529855025644,
+        -34.48996637269593
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.runway_poly) AS Runway",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18654250.0503937,-5925963.49640399,19865295.4766849,-4094783.82192195",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds"
+      },
+      "id": "Runway",
+      "class": "layer-333",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Runway"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        166.61005138215552,
+        -47.25816775904463,
+        178.54423252635164,
+        -34.39688295775617
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.track_cl) AS Track",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18546946.0809027,-5984315.90262995,19875453.0489093,-4082219.02485077",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds"
+      },
+      "id": "Track",
+      "class": "layer-364",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Track"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -176.87407959179984,
+        -46.91177043093205,
+        178.54675598290092,
+        -34.429143798795266
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.basemap_road_3857) AS ElectrolRoads_CL_PrivateLayer",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19689532.4746881,-5927684.63306683,19875733.9588074,-4086572.14618101",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds"
+      },
+      "id": "ElectrolRoads_CL_PrivateLayer",
+      "class": "layer-2093",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "ElectrolRoads_CL_PrivateLayer"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        167.15064410605194,
+        -46.906786648200395,
+        178.54423037970153,
+        -34.41812999897415
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM \"nz-road-centre-line-electoral_3857\") AS Road_CL",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18607124.5876534,-5926872.53078696,19875452.8099453,-4085085.80869813",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds",
+        "id": "Road_CL",
+        "project": "Colour_GenTwo_Working_II",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "Road_CL",
+      "class": "layer-818",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Road_CL"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        167.9417562666703,
+        -46.59935046575831,
+        178.02727254999974,
+        -35.31270218240971
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.railway_cl) AS Rail_CL",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18695190.7905338,-5876921.31742564,19817905.3275813,-4206457.73853114",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds"
+      },
+      "id": "Rail_CL",
+      "class": "layer-319",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Rail_CL"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        167.9733862457549,
+        -44.76457133064716,
+        175.1601978794957,
+        -36.533634942989686
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.basemap_tunnel_3857) AS Tunnel_CL_RoadsOnly",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18698711.8236993,-5584533.89576533,19498744.0351945,-4374299.34804016",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds"
+      },
+      "id": "Tunnel_CL_RoadsOnly",
+      "class": "layer-2094",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Tunnel_CL_RoadsOnly"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        167.16841142563192,
+        -46.639613619503294,
+        178.49426274578886,
+        -34.483340000143066
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.basemap_bridge_3857) AS Bridge_CL_RoadsOnly",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18609102.4366218,-5883446.95855083,19869890.438382,-4093888.90270694",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds"
+      },
+      "id": "Bridge_CL_RoadsOnly",
+      "class": "layer-2092",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Bridge_CL_RoadsOnly"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        167.68697591786895,
+        -46.52610688101195,
+        177.90451908942043,
+        -35.045416870442075
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.tunnel_cl) AS Tunnel_forRail",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18666828.7718411,-5865062.80287913,19804240.4748565,-4170054.82945873",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds"
+      },
+      "id": "Tunnel_forRail",
+      "class": "layer-366",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Tunnel_forRail"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        166.98531163801653,
+        -46.98274106133664,
+        178.4941613677955,
+        -34.483304209623405
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM topo.bridge_cl) AS Bridge_forRail",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18588719.8615001,-5939257.42921689,19869879.1530354,-4093884.06924121",
+        "host": "localhost",
+        "port": "5432",
+        "user": "ireese",
+        "dbname": "lds"
+      },
+      "id": "Bridge_forRail",
+      "class": "layer-244",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Bridge_forRail"
+    },
+    {
+      "geometry": "raster",
+      "extent": [
+        165.84133842130382,
+        -47.58884732105024,
+        178.76232126852491,
+        -34.10343190262608
+      ],
+      "id": "hillshademultiplyrep",
+      "class": "layer-2074-band-1",
+      "Datasource": {
+        "file": "/home/ireese/share/Hillshade_Multiplied_Repro/Hillshade_Multiply_Repro_VRT.vrt",
+        "band": "1"
+      },
+      "layer": null,
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "hillshademultiplyrep"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "",
+  "description": "",
+  "attribution": ""
+}

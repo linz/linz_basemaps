@@ -1,0 +1,265 @@
+/*Road_CL Background*/
+.layer-2093 [zoom>=9]
+[name_label =~ '(?!ACCESSWAY).*']
+{
+  line-width:0.10;
+  line-opacity: 0.5;
+  line-color:#757655;
+  line-smooth: 0.2;
+  line-cap: round;
+  [zoom>=12] {line-width:0.10;}
+  [zoom>=13] {line-color:#A6A886;}
+  [zoom>=14] {line-width:0.5; line-opacity:0.5;}
+  [zoom>=15] {line-width:2.5; line-opacity:0.65;}
+  [zoom>=16] {line-width:5.0; line-opacity:1.0;}
+  [zoom>=17] {line-width:10.0;}
+  [zoom>=18] {line-width:25.0;}
+  [zoom>=19] {line-width:50.0;}
+  [zoom>=20] {line-width:100.0;}
+}
+
+/*Roads_Foreground*/
+.layer-2093::FG [zoom>=15]
+[name_label =~ '(?!ACCESSWAY).*']
+{
+  line-color: #646161;
+  line-width:0.1;
+  line-cap: round;
+  line-smooth: 0.2;
+  [zoom>=16] {line-width:3.0;}
+  [zoom>=17] {line-width:8.0;}
+  [zoom>=18] {line-width:22.0;}
+  [zoom>=19] {line-width:47.0;}
+  [zoom>=20] {line-width:97.0;}
+}
+
+/*Motorways Foreground*/
+.layer-818::Motorways [zoom>=12]
+[name =~ "SH.*"]
+{
+  line-color:#7B4A4A;
+  line-width:0.5; 
+  line-opacity: 0.5;
+  line-cap: round;
+  line-smooth: 0.2;
+  [zoom>=13] {line-width: 0.75; line-opacity:0.75;}
+  [zoom>=14] {line-width: 1.0;}
+  [zoom>=15] {line-width: 3.0; line-opacity:0.75;}
+  [zoom>=16] {line-width: 3.0; line-opacity: 1.0;}
+  [zoom>=17] {line-width: 8.0;}
+  [zoom>=18] {line-width: 22.0;}
+  [zoom>=19] {line-width: 47.0;}
+  [zoom>=20] {line-width: 97.0;}
+}
+
+.layer-2021 [zoom>=8]
+[name_2008 = "Built-up Area (settlement)"] 
+{
+  polygon-fill: #333333;
+  polygon-opacity: 0.5
+}
+
+/*All_Parcels*/
+.layer-1571 [zoom>=12]
+[status = "Current"]
+[topology_type = "Primary"]
+[parcel_intent != "Hydro"] 
+[parcel_intent != "Secondary"]
+[parcel_intent != "Road"]
+[parcel_intent != "Railway"]
+[parcel_intent != "Railway Leased"]
+[parcel_intent != "Streambed"]
+{
+  line-color: #FFFFFF;
+  line-width: 0.1;
+  line-opacity: 0.1;
+  [zoom>=16] {line-opacity: 0.35;}
+  [zoom>=17] {line-opacity: 0.5;}
+  [zoom>=18] {line-width: 0.25;}
+}
+
+ /*Rail_Centerlines*/
+.layer-319 [zoom>=14]
+{
+  line-width: 0.5;
+  line-color: #888888;
+  	railfill/line-width: 1.5;
+	railfill/line-color: #888888;
+	railfill/line-dasharray: 1,5;
+	
+  [zoom>=15]
+    {
+  	line-width: 1.0;
+  	line-color: #888888;
+    	railfill/line-width: 6;
+		railfill/line-color:#888888;
+		railfill/line-dasharray: 1,20;
+	}
+  
+  [zoom>=19]
+    {
+  	line-width: 1.0;
+  	line-color: #888888;
+    	railfill/line-width: 11.0;
+		railfill/line-color:#888888;
+		railfill/line-dasharray: 1,50;
+	}
+}
+
+/*Runway*/
+.layer-333 [zoom>=8]
+{
+  polygon-fill: #333333;
+  polygon-opacity: 0.5
+}
+
+/*Tracks*/
+.layer-364 [zoom>=15]
+{
+  line-width:0.5;
+  line-color: #A6A886;
+  line-dasharray: 3,3;
+}
+
+/*Tunnel_RoadsOnly_ElectrolAlign*/  
+.layer-2094 [zoom>=16]
+{
+  line-color: #E8E8E8;
+  line-width:5.0;
+  line-smooth: 0.2;
+  line-dasharray: 12,6;
+  [zoom>=17] {line-width:10.0;line-dasharray: 24,12;}
+  [zoom>=18] {line-width:25.0;line-dasharray: 48,24;}
+  [zoom>=19] {line-width:50.0;line-dasharray: 96,48;}
+  [zoom>=20] {line-width:100.0;line-dasharray: 192,96;}
+}
+
+/*Tunnel_RoadsOnly_ElectrolAlign_Foreground*/  
+.layer-2094::FG [zoom>=16]
+{
+  line-color: #888888;
+  line-width:2.0;
+  line-cap: butt;
+  line-smooth: 0.2;
+  [zoom>=17] {line-width:5.0;}
+  [zoom>=18] {line-width:18.0;}
+  [zoom>=19] {line-width:40.0;}
+  [zoom>=20] {line-width:85.0;}
+}
+
+/*Bridge_CL_ElectrolAlign*/
+.layer-2092 [zoom>=16]
+{
+  line-offset: 3.5;
+  line-width:2.0;
+  line-color:#333333;
+  line-cap: round;
+  	offset/line-offset: -3.5;
+  	offset/line-width:2.0;
+  	offset/line-color:#333333;
+  	offset/line-cap: round;
+  [zoom>=17]
+    {
+  	line-offset: 5.0;
+  	line-width:2.0;
+  	line-color:#333333;
+  		offset/line-offset: -5.0;
+  		offset/line-width:2.0;
+  		offset/line-color:#333333;
+	}
+  [zoom>=18]
+    {
+  	line-offset: 12.5;
+  	line-width:4.0;
+  	line-color:#333333;
+  		offset/line-offset: -12.5;
+  		offset/line-width:4.0;
+  		offset/line-color:#333333;
+	}
+  [zoom>=19]
+    {
+  	line-offset: 25.0;
+  	line-width:4.0;
+  	line-color:#333333;
+  		offset/line-offset: -25.0;
+  		offset/line-width:4.0;
+  		offset/line-color:#333333;
+	}
+  [zoom>=20]
+    {
+  	line-offset: 50.0;
+  	line-width:8.0;
+  	line-color:#333333;
+  		offset/line-offset: -50.0;
+  		offset/line-width:8.0;
+  		offset/line-color:#333333;
+	}
+}
+
+/*Tunnel_forRail*/
+.layer-366 [zoom>=15]
+[use1='train']
+{
+  line-width: 8.0;
+  line-color: #888888;
+  line-cap: round;
+  line-opacity: 0.25;
+  [zoom>=17]
+    {line-width: 10.0; line-opacity: 0.25;}
+  [zoom>=18]
+    {line-width: 25.0; line-opacity: 0.25;}
+  [zoom>=19]
+    {line-width: 50.0; line-opacity: 0.25;}
+  [zoom>=20]
+    {line-width: 100.0; line-opacity: 0.25;}
+}
+
+/*Bridge_forRail*/
+.layer-244 [zoom>=16]
+[use_1='train']
+{
+  line-offset: 3.5;
+  line-width:2.0;
+  line-color:#333333;
+  line-cap: round;
+  	offset/line-offset: -3.5;
+  	offset/line-width:2.0;
+  	offset/line-color:#333333;
+  	offset/line-cap: round;
+  [zoom>=17]
+    {
+  	line-offset: 5.0;
+  	line-width:2.0;
+  	line-color:#333333;
+  		offset/line-offset: -5.0;
+  		offset/line-width:2.0;
+  		offset/line-color:#333333;
+	}
+  [zoom>=18]
+    {
+  	line-offset: 12.5;
+  	line-width:4.0;
+  	line-color:#333333;
+  		offset/line-offset: -12.5;
+  		offset/line-width:4.0;
+  		offset/line-color:#333333;
+	}
+  [zoom>=19]
+    {
+  	line-offset: 25.0;
+  	line-width:4.0;
+  	line-color:#333333;
+  		offset/line-offset: -25.0;
+  		offset/line-width:4.0;
+  		offset/line-color:#333333;
+	}
+  [zoom>=20]
+    {
+  	line-offset: 50.0;
+  	line-width:8.0;
+  	line-color:#333333;
+  		offset/line-offset: -50.0;
+  		offset/line-width:8.0;
+  		offset/line-color:#333333;
+	}
+}
