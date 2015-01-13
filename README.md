@@ -2,7 +2,7 @@
 
 Code, imagery, data, needed to create basemaps found on LINZ Data Service (LDS)
 
-![Screenshot Colour Basemap](C:\Data\GITHUB\img\Colour_GenTwo_Working_Windows_250Bathy.jpg)
+![Screenshot Colour Basemap](img/Colour_GenTwo_Working_Windows_250Bathy.jpeg)
 
 The following instructions detail processes for building LINZ basemaps on Linux and Windows platforms. For best results, it is helpful to have these items in place before starting:
 
