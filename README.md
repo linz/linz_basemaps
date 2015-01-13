@@ -1,4 +1,4 @@
-# LINZ_Basemap_Info
+# linz_basemaps
 
 Code, imagery, data, needed to create basemaps found on LINZ Data Service (LDS)
 
