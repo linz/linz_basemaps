@@ -6,7 +6,7 @@
 }
 
 /*Parcels_All*/
-.layer-1571 [zoom>=11]
+.layer-1571 [zoom>=17]
 [status = "Current"] 
 [topology_type = "Primary"]
 [parcel_intent != "Hydro"] 
