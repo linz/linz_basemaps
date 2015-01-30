@@ -1,0 +1,87 @@
+{
+  "bounds": [
+    165.3223,
+    -49.3824,
+    179.2969,
+    -32.5468
+  ],
+  "center": [
+    174.4849,
+    -41.3273,
+    6
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 4,
+  "maxzoom": 20,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        -178.82651554599963,
+        -52.62088112799993,
+        179.0677941370002,
+        -29.231341718999982
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM public.nz_coastlines_and_islands_polygons_topo_150k) AS Coastline",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19906876.6509161,-6913176.78084885,19933735.6608056,-3405123.7317536",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "dbname": "NZ_Data",
+        "password": "postgres"
+      },
+      "id": "Coastline",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Coastline"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        167.7745984665079,
+        -47.082300374109344,
+        178.35006696385068,
+        -34.91153048104533
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM citytown_topo50) AS Cities",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18676582.8693376,-5955517.94973633,19853838.6373621,-4151864.97969357",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "dbname": "TestDB",
+        "password": "postgres",
+        "id": "Cities",
+        "project": "Text_Test",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "Cities",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "Cities"
+    }
+  ],
+  "scale": 1,
+  "metatile": 1,
+  "name": "",
+  "description": "",
+  "attribution": ""
+}
