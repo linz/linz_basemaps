@@ -21,7 +21,7 @@
 [name =~ 'State Highway.*']
 {
   shield-name: "[name].replace('State Highway\s+(\d+)','\1')";
-  shield-file: url("C:\Data\IMAGERY\NZ_HighwayShield_II.svg");
+  shield-file: url("http://www.linz.govt.nz/sites/default/files/nz_highwayshield_2.svg");
   shield-face-name: 'Arial Bold';
   shield-fill:#FFFFFF;
   shield-size: 9.0;
