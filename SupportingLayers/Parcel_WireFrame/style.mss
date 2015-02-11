@@ -7,7 +7,7 @@ Map {background-color: transparent;}
 [status != "Easement"]
 [topology_type = "Primary"] 
 {
-  line-color: #FFFFFF;
+  line-color: #111111;
   line-width: 0.1;
   line-opacity: 0.1;
     [zoom>=4] {line-opacity: 0.1;}
@@ -23,7 +23,7 @@ Map {background-color: transparent;}
 [status != "Historic"]
 [parcel_intent = "Secondary"] 
 {
-  	line-color: #FFFFFF;
+  	line-color: #111111;
   	line-width: 0.75;
   	polygon-fill: #AAAAAA;
   	polygon-opacity: 0.35;
