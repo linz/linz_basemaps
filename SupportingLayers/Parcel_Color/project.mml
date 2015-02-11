@@ -36,7 +36,7 @@
         "host": "localhost",
         "port": "5432",
         "user": "postgres",
-		"password": "postgres",
+        "password": "postgres",
         "dbname": "NZ_Data",
         "id": "All_Parcel",
         "project": "Parcel_Color",

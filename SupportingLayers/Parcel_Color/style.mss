@@ -29,7 +29,7 @@ Map
 [status != "Easement"]
 [topology_type = "Primary"] 
 {
-  line-color: #AAAAAA;
+  line-color: #111111;
   line-width: 0.05;
   line-opacity: 0.50;
     [zoom>=9] {line-opacity: 0.5;}
