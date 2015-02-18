@@ -9,8 +9,8 @@ Map {background-color: transparent;}
 {
   line-color: #111111;
   line-width: 0.1;
-  line-opacity: 0.1;
-    [zoom>=4] {line-opacity: 0.1;}
+  line-opacity: 0.5;
+    [zoom>=4] {line-opacity: 0.2;}
     [zoom>=8] {line-opacity: 0.5;}
     [zoom>=10] {line-width: 0.2;}
     [zoom>=14] {line-opacity: 0.75;}

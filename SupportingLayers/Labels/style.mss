@@ -2,19 +2,12 @@ Map {
   background-color: transparent;
 }
 
-#Coastline {
-  line-color:#594;
-  line-width:0.5;
-  polygon-opacity:1;
-  polygon-fill:#ae8;
-}
-
-#Cities::HOne [zoom>=5][zoom<=13][size=12.2][desc_code='METR'], 
-#Cities::HOne [zoom>=5][zoom<=13][size=12.2][desc_code='TOWN'],
-#Cities::HOne [zoom>=5][zoom<=13][size=12.2][desc_code='POPL'], 
-#Cities::HOne [zoom>=5][zoom<=13][size=12.2][desc_code='LOC'],
-#Cities::HOne [zoom>=5][zoom<=13][size=12.2][desc_code='USAT'],
-#Cities::HOne [zoom>=5][zoom<=13][size=12.2][desc_code='SBRB']
+.layer-280::HOne [zoom>=5][zoom<=13][size=12.2][desc_code='METR'], 
+.layer-280::HOne [zoom>=5][zoom<=13][size=12.2][desc_code='TOWN'],
+.layer-280::HOne [zoom>=5][zoom<=13][size=12.2][desc_code='POPL'], 
+.layer-280::HOne [zoom>=5][zoom<=13][size=12.2][desc_code='LOC'],
+.layer-280::HOne [zoom>=5][zoom<=13][size=12.2][desc_code='USAT'],
+.layer-280::HOne [zoom>=5][zoom<=13][size=12.2][desc_code='SBRB']
 {
   [zoom>=5][zoom<=10]
     {
@@ -45,12 +38,12 @@ Map {
   [zoom>=12]{text-size: 24.0;}
 }
 
-#Cities::HTwo [zoom>=7][zoom<=15][size=9.5][desc_code='METR'], 
-#Cities::HTwo [zoom>=7][zoom<=15][size=9.5][desc_code='TOWN'],
-#Cities::HTwo [zoom>=7][zoom<=15][size=9.5][desc_code='POPL'],
-#Cities::HTwo [zoom>=7][zoom<=15][size=9.5][desc_code='LOC'],
-#Cities::HTwo [zoom>=7][zoom<=15][size=9.5][desc_code='USAT'],
-#Cities::HTwo [zoom>=7][zoom<=15][size=9.5][desc_code='SBRB']
+.layer-280::HTwo [zoom>=7][zoom<=15][size=9.5][desc_code='METR'], 
+.layer-280::HTwo [zoom>=7][zoom<=15][size=9.5][desc_code='TOWN'],
+.layer-280::HTwo [zoom>=7][zoom<=15][size=9.5][desc_code='POPL'],
+.layer-280::HTwo [zoom>=7][zoom<=15][size=9.5][desc_code='LOC'],
+.layer-280::HTwo [zoom>=7][zoom<=15][size=9.5][desc_code='USAT'],
+.layer-280::HTwo [zoom>=7][zoom<=15][size=9.5][desc_code='SBRB']
 {
   [zoom>=7][zoom<=11]
     {
@@ -83,12 +76,12 @@ Map {
   [zoom>=14]{text-size: 27.0;}
 }
 
-#Cities::HThree [zoom>=9][zoom<=15][size<=8.2][size>=7.5][desc_code='METR'], 
-#Cities::HThree [zoom>=9][zoom<=15][size<=8.2][size>=7.5][desc_code='TOWN'],
-#Cities::HThree [zoom>=9][zoom<=15][size<=8.2][size>=7.5][desc_code='POPL'],
-#Cities::HThree [zoom>=9][zoom<=15][size<=8.2][size>=7.5][desc_code='LOC'],
-#Cities::HThree [zoom>=9][zoom<=15][size<=8.2][size>=7.5][desc_code='USAT'],
-#Cities::HThree [zoom>=9][zoom<=15][size<=8.2][size>=7.5][desc_code='SBRB']
+.layer-280::HThree [zoom>=9][zoom<=15][size<=8.2][size>=7.5][desc_code='METR'], 
+.layer-280::HThree [zoom>=9][zoom<=15][size<=8.2][size>=7.5][desc_code='TOWN'],
+.layer-280::HThree [zoom>=9][zoom<=15][size<=8.2][size>=7.5][desc_code='POPL'],
+.layer-280::HThree [zoom>=9][zoom<=15][size<=8.2][size>=7.5][desc_code='LOC'],
+.layer-280::HThree [zoom>=9][zoom<=15][size<=8.2][size>=7.5][desc_code='USAT'],
+.layer-280::HThree [zoom>=9][zoom<=15][size<=8.2][size>=7.5][desc_code='SBRB']
 {
   
   [zoom>=9][zoom<=12]
@@ -122,12 +115,12 @@ Map {
   [zoom>=14]{text-size: 24.0;}
 }
 
-#Cities [zoom>=10][zoom<=16][size<=6.8][size>=6.1][desc_code='METR'], 
-#Cities [zoom>=10][zoom<=16][size<=6.8][size>=6.1][desc_code='TOWN'],
-#Cities [zoom>=10][zoom<=16][size<=6.8][size>=6.1][desc_code='POPL'], 
-#Cities [zoom>=10][zoom<=16][size<=6.8][size>=6.1][desc_code='LOC'],
-#Cities [zoom>=10][zoom<=16][size<=6.8][size>=6.1][desc_code='USAT'],
-#Cities [zoom>=10][zoom<=16][size<=6.8][size>=6.1][desc_code='SBRB']
+.layer-280 [zoom>=10][zoom<=16][size<=6.8][size>=6.1][desc_code='METR'], 
+.layer-280 [zoom>=10][zoom<=16][size<=6.8][size>=6.1][desc_code='TOWN'],
+.layer-280 [zoom>=10][zoom<=16][size<=6.8][size>=6.1][desc_code='POPL'], 
+.layer-280 [zoom>=10][zoom<=16][size<=6.8][size>=6.1][desc_code='LOC'],
+.layer-280 [zoom>=10][zoom<=16][size<=6.8][size>=6.1][desc_code='USAT'],
+.layer-280 [zoom>=10][zoom<=16][size<=6.8][size>=6.1][desc_code='SBRB']
 {
   [zoom>=10][zoom<=12]
      {
@@ -160,12 +153,12 @@ Map {
   [zoom>=14]{text-size: 18.0;}
 }
 
-#Cities [zoom>=12][zoom<=18][size<=5.5][desc_code='METR'], 
-#Cities [zoom>=12][zoom<=18][size<=5.5][desc_code='TOWN'],
-#Cities [zoom>=12][zoom<=18][size<=5.5][desc_code='POPL'], 
-#Cities [zoom>=12][zoom<=18][size<=5.5][desc_code='LOC'],
-#Cities [zoom>=12][zoom<=18][size<=5.5][desc_code='USAT'],
-#Cities [zoom>=12][zoom<=18][size<=5.5][desc_code='SBRB']
+.layer-280 [zoom>=12][zoom<=18][size<=5.5][desc_code='METR'], 
+.layer-280 [zoom>=12][zoom<=18][size<=5.5][desc_code='TOWN'],
+.layer-280 [zoom>=12][zoom<=18][size<=5.5][desc_code='POPL'], 
+.layer-280 [zoom>=12][zoom<=18][size<=5.5][desc_code='LOC'],
+.layer-280 [zoom>=12][zoom<=18][size<=5.5][desc_code='USAT'],
+.layer-280 [zoom>=12][zoom<=18][size<=5.5][desc_code='SBRB']
 {
   text-name: [name];
   text-face-name: 'Arial Bold';
@@ -180,4 +173,25 @@ Map {
   [zoom>=10]{text-size: 10.0;} 
   [zoom>=12]{text-size: 11.0;}
   [zoom>=14]{text-size: 14.0;}
+}
+
+/*Road_CL_Electrol_StreetLabels*/
+.layer-818::StreetLabels
+[zoom>=16]
+[name =~ '(?!State Highway).*']
+{
+  text-name: [name];
+  text-transform: capitalize;
+  text-face-name: 'Arial Regular';
+  text-fill: #FFFAFA;
+  text-size: 11.0;
+  text-halo-fill: #999999;
+  text-halo-radius: 1.0;
+  text-placement: line;
+  text-character-spacing: 1.5;
+  text-spacing: 400.0;
+  [zoom>=17] {text-size: 12.0;}
+  [zoom>=17] {text-halo-radius: 0.5;}
+  [zoom>=19] {text-size: 16.0; text-character-spacing: 2.0;}
+  [zoom>=20] {text-size: 24.0;}
 }

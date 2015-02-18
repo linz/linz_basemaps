@@ -27,8 +27,11 @@ Map
 [status != "Historic"]
 [status != "Secondary"]
 [status != "Easement"]
+[parcel_intent != "Hydro"]
+[parcel_intent != "Road"]
 [topology_type = "Primary"] 
 {
+  polygon-fill: #EEEEEE;
   line-color: #111111;
   line-width: 0.05;
   line-opacity: 0.50;
@@ -45,7 +48,8 @@ Map
 [parcel_intent = "Road"]
 {
   polygon-fill: #531A04; 
-  polygon-opacity: 0.2;
+  polygon-opacity: 0.4;
+  [zoom=14] {polygon-opacity: 0.5;}
 }
   
 .layer-1571 [zoom>=17]
