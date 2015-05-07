@@ -53,7 +53,7 @@
 }
 
 .layer-2021 [zoom>=8]
-[name_2008 = "Built-up Area (settlement)"] 
+[Name_2008 = "Built-up Area (settlement)"] 
 {
   polygon-fill: #333333;
   polygon-opacity: 0.5

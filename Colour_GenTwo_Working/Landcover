@@ -53,7 +53,7 @@
 
 /*LCDB 3.3*/
 .layer-2021 [zoom>=6]
-[name_2008 = "Gravel or Rock"] 
+[Name_2008 = "Gravel or Rock"] 
 {
   polygon-fill: #73736C;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
@@ -69,7 +69,7 @@
 
 /*LCDB 3.3*/
 .layer-2021 [zoom>=5]
-[name_2008 = "Permanent Snow and Ice"] 
+[Name_2008 = "Permanent Snow and Ice"] 
 {
   polygon-fill: #CAE1FF;
   polygon-comp-op: soft-light;
@@ -80,11 +80,11 @@
 }
 
 /*LCDB 3.3*/
-.layer-2021 [zoom>=5][name_2008 = "Forest - Harvested"],
-.layer-2021 [zoom>=5][name_2008 = "Broadleaved Indigenous Hardwoods"],
-.layer-2021 [zoom>=5][name_2008 = "Exotic Forest"],
-.layer-2021 [zoom>=5][name_2008 = "Deciduous Hardwoods"],
-.layer-2021 [zoom>=5][name_2008 = "Indigenous Forest"]
+.layer-2021 [zoom>=5][Name_2008 = "Forest - Harvested"],
+.layer-2021 [zoom>=5][Name_2008 = "Broadleaved Indigenous Hardwoods"],
+.layer-2021 [zoom>=5][Name_2008 = "Exotic Forest"],
+.layer-2021 [zoom>=5][Name_2008 = "Deciduous Hardwoods"],
+.layer-2021 [zoom>=5][Name_2008 = "Indigenous Forest"]
 {
   polygon-gamma: 0.75;
   polygon-fill: #23321F;
@@ -96,9 +96,9 @@
 }
 
 /*LCDB 3.3*/
-.layer-2021 [zoom>=5][name_2008 = "Manuka and/or Kanuka"],
-.layer-2021 [zoom>=5][name_2008 = "Mixed Exotic Shrubland"],
-.layer-2021 [zoom>=5][name_2008 = "Sub Alpine Shrubland"]
+.layer-2021 [zoom>=5][Name_2008 = "Manuka and/or Kanuka"],
+.layer-2021 [zoom>=5][Name_2008 = "Mixed Exotic Shrubland"],
+.layer-2021 [zoom>=5][Name_2008 = "Sub Alpine Shrubland"]
 {
   polygon-fill: #313E27;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
@@ -108,7 +108,7 @@
 }
 
 /*LCDB 3.3*/
-.layer-2021 [name_2008 = "Sand or Gravel"]
+.layer-2021 [Name_2008 = "Sand or Gravel"]
 [zoom>=6]
 {
   polygon-fill: #333333;
@@ -117,8 +117,8 @@
 }
 
 /*LCDB 3.3*/
-.layer-2021 [zoom>=5][name_2008 = "Alpine Grass/Herbfield"],
-.layer-2021 [zoom>=5][name_2008 = "Low Producing Grassland"]
+.layer-2021 [zoom>=5][Name_2008 = "Alpine Grass/Herbfield"],
+.layer-2021 [zoom>=5][Name_2008 = "Low Producing Grassland"]
 {
   polygon-fill: #48433A;
   polygon-opacity: 0.25;
@@ -127,9 +127,9 @@
 }
 
 /*LCDB 3.3*/
-.layer-2021 [zoom>=6][name_2008 = "Gorse and/or Broom"],
-.layer-2021 [zoom>=6][name_2008 = "Fernland"],
-.layer-2021 [zoom>=6][name_2008 = "Herbaceous Freshwater Vegetation"]
+.layer-2021 [zoom>=6][Name_2008 = "Gorse and/or Broom"],
+.layer-2021 [zoom>=6][Name_2008 = "Fernland"],
+.layer-2021 [zoom>=6][Name_2008 = "Herbaceous Freshwater Vegetation"]
 {
   polygon-fill: #23321F;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
@@ -137,7 +137,7 @@
 }
 
 /*LCDB 3.3*/
-.layer-2021 [zoom>=6][name_2008 = "Flaxland"]
+.layer-2021 [zoom>=6][Name_2008 = "Flaxland"]
 {
   polygon-fill: #313E27;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
@@ -145,7 +145,7 @@
 }
 
 /*LCDB 3.3*/
-.layer-2021 [zoom>=6][name_2008="Matagouri or Grey Scrub"]
+.layer-2021 [zoom>=6][Name_2008="Matagouri or Grey Scrub"]
 {
   polygon-fill: #48433A;
   polygon-opacity: 0.5;
@@ -154,7 +154,7 @@
 }
 
 /*LCDB 3.3*/
-.layer-2021 [zoom>=5][name_2008="Short-rotation Cropland"]
+.layer-2021 [zoom>=5][Name_2008="Short-rotation Cropland"]
 {
   polygon-fill: #6C7655;
   polygon-opacity: 0.35;
@@ -182,7 +182,7 @@
 
 /*LCDB 3.3*/
 .layer-2021 [zoom>=5]
-[name_2008 = "Depleted Grassland"]
+[Name_2008 = "Depleted Grassland"]
 {
   polygon-fill: #757655;
   polygon-opacity: 0.25;

@@ -2,17 +2,17 @@ Map {
   background-color: #1E3D4A;
 }
 
- /*Bathemetry*/
+/*Bathemetry*/
 .layer-2022 [zoom>=2]
 {
-  [drval2>=-3.6][drval2<=0] {polygon-fill:#FFFFFF;}
-  [drval2>0][drval2<=2.0] {polygon-fill:#FFFFFF;}
-  [drval2>2.0][drval2<=5] {polygon-fill:#FFFFFF;}
-  [drval2>5][drval2<=10] {polygon-fill:#E8E8E8;}
-  [drval2>10][drval2<=20] {polygon-fill:#E0E0E0;}
-  [drval2>20][drval2<=30] {polygon-fill:#DCDCDC;}
-  [drval2>30][drval2<=50] {polygon-fill:#D1D1D1;}
-  [drval2>50][drval2<=100] {polygon-fill:#CDCDCD; polygon-opacity:0.75;}
+  [DRVAL2>=-3.6][DRVAL2<=0] {polygon-fill:#FFFFFF;}
+  [DRVAL2>0][DRVAL2<=2.0] {polygon-fill:#FFFFFF;}
+  [DRVAL2>2.0][DRVAL2<=5] {polygon-fill:#FFFFFF;}
+  [DRVAL2>5][DRVAL2<=10] {polygon-fill:#E8E8E8;}
+  [DRVAL2>10][DRVAL2<=20] {polygon-fill:#E0E0E0;}
+  [DRVAL2>20][DRVAL2<=30] {polygon-fill:#DCDCDC;}
+  [DRVAL2>30][DRVAL2<=50] {polygon-fill:#D1D1D1;}
+  [DRVAL2>50][DRVAL2<=100] {polygon-fill:#CDCDCD; polygon-opacity:0.75;}
   polygon-comp-op: overlay;
    
   [zoom>=9]
