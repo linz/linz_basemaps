@@ -1,8 +1,6 @@
-# linz_basemaps
+#ReadMe
 
-Code, imagery, data, needed to create basemaps found on LINZ Data Service (LDS)
-
-![Screenshot Colour Basemap](img/Colour_GenTwo_Working_Windows_250Bathy.jpeg)
+![Screenshot Colour Basemap](C:\Data\GITHUB\img\Colour_GenTwo_Working_Windows_250Bathy.jpg)
 
 The following instructions detail processes for building LINZ basemaps on Linux and Windows platforms. For best results, it is helpful to have these items in place before starting:
 
@@ -23,13 +21,13 @@ This project employs a collection of vector and raster data derived from the LIN
 - http://www.niwa.co.nz/
 
 ##Project Set-Up
-Reconstructing basemaps requires using TileMill, QGIS, and a PostgreSQL database with PostGIS extensions.  Listed below are links for software and generalised instructions for builds on Linux and Windows systems.  For now, Linux is the recommended OS, as Windows currently experiences memory issues with large TileMill projects.
+Reconstructing basemaps requires using TileMill, QGIS, and a PostgreSQL database with PostGIS extensions.  Listed below are links for software and generalised instructions for builds on Linux and Windows systems.
 
 ####1. TileMill
 
-Installs for TileMill are found here:
+The latest installs for TileMill, Windows and Linux, are found here:
 
-- https://www.mapbox.com/tilemill/
+- https://gist.github.com/bsudekum/b4606871250d9d834b3d
 
 ######*Set-Up*
 
@@ -87,7 +85,7 @@ This project contains a mix of raster and vector data with a combined size of ar
 
 ######*LDS*
 
-Use this geolink to obtain all of the LINZ distributed data. Please note DEM comments below.
+Use this geolink to LDS in order to obtain all layers necessary to rebuild the basemaps. Connecting to LDS with this link selects layers and makes them ready for download. There should be eighteen vector layers and two raster file ready for download. Please note the DEM comments below.
 
 -	https://data.linz.govt.nz/x/p8oaUg 
 
@@ -145,10 +143,10 @@ When installed, TileMill builds itself into the /Documents folder of Windows and
 
 ######*Download Projects*
 
-Each project folder contains style sheets used by TileMill to build each map project.  Layers in each style sheet currently point to the PostgreSQL database.  No modification should be necessary, however, there may be instances where user will need to relink file paths, for example relinking DEM and Hillshade vrt to each project.  Style sheets containing the CartoCSS may be downloaded from this GitHub location.  Upon download, style sheets are placed locally inside the projects folder of MapBox.  (â€¦\Documents\MapBox\project)
+Project folders contain style sheets used by TileMill to build each map project.  Layers in each style sheet currently point to the PostgreSQL database.  No modification should be necessary, however, there may be instances where user will need to relink file paths, for example relinking DEM and Hillshade vrt to each project.  Style sheets containing the CartoCSS may be downloaded from this GitHub location.  Upon download, style sheets are placed locally inside the projects folder of MapBox.  (…\Documents\MapBox\project)
 
 ######*Raster Texture Fills*
-Download the raster texture fills from GitHub and place locally in: \Documents\MapBox\cache.  Texture files required for this project are:
+Download the raster texture fills, found here: https://github.com/linz/linz_basemaps/tree/master/img, from GitHub and place locally in: \Documents\MapBox\cache.  Texture files required for this project are:
 
 - gravelrocks.jpg
 
@@ -164,7 +162,7 @@ With the raster and hillshade in place, create a .vrt file.  A GDAL virtual form
 
 - http://www.gdal.org/gdalbuildvrt.html
 
-The following commandline processes will create the required .vrt:
+The following commandline processes will create the required .vrt.  Be sure to change directories, navigating to the folder containing the raster files.  Create the .vrt in the same folder as the raster files.
 
 *Windows (run through OSGeo4W Command Shell):*
 
@@ -178,10 +176,9 @@ The following commandline processes will create the required .vrt:
 
 ##Licensing
 
-This project is released under the terms of the new BSD license and is found here:
+This project is released under the terms of the new *Creative Commons Attribution 3.0 New Zealand* license and is found here:
 
 - http://creativecommons.org/licenses/by/3.0/nz/
 
 Copyright 2013 Crown copyright (c) Land Information New Zealand and the New Zealand Government.
-
 
