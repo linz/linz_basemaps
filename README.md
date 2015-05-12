@@ -1,6 +1,7 @@
 #ReadMe
 
-![Screenshot Colour Basemap](C:\Data\GITHUB\img\Colour_GenTwo_Working_Windows_250Bathy.jpg)
+![Screenshot Colour Basemap](https://github.com/linz/linz_basemaps/blob/master/img/Colour_GenTwo_Working_Windows_250Bathy.jpeg)
+
 
 The following instructions detail processes for building LINZ basemaps on Linux and Windows platforms. For best results, it is helpful to have these items in place before starting:
 
@@ -135,7 +136,7 @@ Linux:
 
 	find . -name '*.gdb' | xargs -P 3 -t -n1 -I %  ogr2ogr -f "PostgreSQL" PG:"dbname=NZ_Data_GDB user=basemap_reader port=5432 password=postgres host=localhost" % 
 
-**Note:** You may need to change your *user* and *password* parameters to fit your PostgreSQL database configuration.
+**Note:** You may need to change your *username* and *password* parameters to fit your PostgreSQL database configuration.
 
 ####5. Build Folders
 
@@ -170,7 +171,7 @@ The following commandline processes will create the required .vrt.  Be sure to c
 
 *Linux:*
 
-	find . -name '*.tif' | xargs -P 3 -t -n1 -I % gdalbuildvrt -resolution highest Hillshade_Multiply_Repro_VRT.vrt
+	find . -name '*.tif' | xargs -P 3 -t -n1 -I % gdalbuildvrt -resolution highest Hillshade_Multiply_Repro_VRT.vrt %
 
 
 
