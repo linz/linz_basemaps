@@ -2,15 +2,12 @@ Map {background-color: transparent;}
 
 .layer-1571 [zoom>=1]
 [status = "Current"]
-[status != "Historic"]
-[status != "Secondary"]
-[status != "Easement"]
 [topology_type = "Primary"] 
 {
   line-color: #111111;
   line-width: 0.1;
-  line-opacity: 0.5;
-    [zoom>=4] {line-opacity: 0.2;}
+  line-opacity: 0.1;
+    [zoom>=4] {line-opacity: 0.1;}
     [zoom>=8] {line-opacity: 0.5;}
     [zoom>=10] {line-width: 0.2;}
     [zoom>=14] {line-opacity: 0.75;}
@@ -20,7 +17,6 @@ Map {background-color: transparent;}
 
 .layer-1571 [zoom>=17]
 [status = "Current"] 
-[status != "Historic"]
 [parcel_intent = "Secondary"] 
 {
   	line-color: #111111;
