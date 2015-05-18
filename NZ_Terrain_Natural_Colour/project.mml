@@ -88,7 +88,7 @@
       "id": "nzdemall",
       "class": "layer-1768",
       "Datasource": {
-        "file": "/home/ireese/data/share/Data/Geographx_NZ_DEM_Edited/NZ_DEM_Originals/NZ_DEM_All_Two.vrt",
+        "file": "C:\\Data\\TILEMILL\\BASEMAPS_Data\\NZ_DEM_Originals\\NZ_DEM_All.vrt",
         "band": "1"
       },
       "layer": null,
@@ -324,6 +324,28 @@
       "name": "BaseMap_Road"
     },
     {
+      "geometry": "raster",
+      "extent": [
+        165.84133842130382,
+        -47.58884732105024,
+        178.76232126852491,
+        -34.10343190262608
+      ],
+      "id": "hillshademultiplyrep",
+      "class": "layer-2074",
+      "Datasource": {
+        "file": "C:\\Data\\TILEMILL\\BASEMAPS_Data\\Hillshade_Multiplied_Repro\\Hillshade_Multiply_Repro_VRT.vrt",
+        "band": "1"
+      },
+      "layer": null,
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "hillshademultiplyrep"
+    },
+    {
       "geometry": "linestring",
       "extent": [
         -176.87407923330017,
@@ -333,7 +355,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(Select * From public.nz_road_centre_line__electoral_) AS Roads_Electrol",
+        "table": "(Select * From public.nz_road_centre_line_electoral) AS Roads_Electrol",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -485,13 +507,16 @@
         "host": "localhost",
         "port": "5432",
         "user": "postgres",
-        "password": "postgres"
+        "password": "postgres",
+        "cursor_size": "1000"
       },
       "id": "AllParcels",
       "class": "layer-1571",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
+      "advanced": {
+        "cursor_size": "1000"
+      },
       "name": "AllParcels"
     },
     {
@@ -577,28 +602,6 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "Bridge_Topo"
-    },
-    {
-      "geometry": "raster",
-      "extent": [
-        165.84133842130382,
-        -47.58884732105024,
-        178.76232126852491,
-        -34.10343190262608
-      ],
-      "id": "hillshademultiplyrep",
-      "class": "layer-2074",
-      "Datasource": {
-        "file": "/home/ireese/data/share/Data/Hillshade_Multiplied_Repro/Hillshade_Multiply_Repro_VRT.vrt",
-        "band": "1"
-      },
-      "layer": null,
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {
-        "band": "1"
-      },
-      "name": "hillshademultiplyrep"
     }
   ],
   "scale": 1,

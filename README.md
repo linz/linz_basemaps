@@ -5,7 +5,7 @@
 
 The following instructions detail processes for building LINZ basemaps on Linux and Windows platforms. For best results, it is helpful to have these items in place before starting:
 
-- TileMill https://www.mapbox.com/tilemill/
+- TileMill https://gist.github.com/bsudekum/b4606871250d9d834b3d
 - PostgreSQL with PostGIS extensions http://postgis.net/ or http://www.postgresql.org
 - QGIS (for Windows users) http://www.qgis.org/en/site/forusers/download.html (OSGeo4W version)
 - GDAL (for Linux users)
@@ -53,11 +53,11 @@ To create the database run the following SQL:
 	
 You should then create a normal database user that Tilmill will connect with. Run the following SQL:
 
-	CREATE ROLE basemap_reader
+	CREATE ROLE postgres
 	
 Your connection string to the database will then look like (unless you didn't allow for trusted connections)
 
-	host=localhost port=5432 dbname=NZ_Data user=basemap_reader
+	host=localhost port=5432 dbname=NZ_Data user=postgres
 
 Within the new database, NZ_Data, run the following SQL:
 
@@ -130,11 +130,11 @@ FileGDB tables cannot be imported directly to PostgreSQL databases. In Windows, 
 
 Windows:
 
-	FOR /R /D %i in (*.gdb) do (ogr2ogr -f "PostgreSQL" PG:"host=localhost dbname=NZ_Data_GDB user=basemap_reader password=postgres" -skipfailures %i)
+	FOR /R /D %i in (*.gdb) do (ogr2ogr -f "PostgreSQL" PG:"host=localhost dbname=NZ_Data user=postgres password=postgres" -skipfailures %i)
 
 Linux:
 
-	find . -name '*.gdb' | xargs -P 3 -t -n1 -I %  ogr2ogr -f "PostgreSQL" PG:"dbname=NZ_Data_GDB user=basemap_reader port=5432 password=postgres host=localhost" % 
+	find . -name '*.gdb' | xargs -P 3 -t -n1 -I %  ogr2ogr -f "PostgreSQL" PG:"dbname=NZ_Data user=postgres port=5432 password=postgres host=localhost" % 
 
 **Note:** You may need to change your *username* and *password* parameters to fit your PostgreSQL database configuration.
 
@@ -147,7 +147,7 @@ When installed, TileMill builds itself into the /Documents folder of Windows and
 Project folders contain style sheets used by TileMill to build each map project.  Layers in each style sheet currently point to the PostgreSQL database.  No modification should be necessary, however, there may be instances where user will need to relink file paths, for example relinking DEM and Hillshade vrt to each project.  Style sheets containing the CartoCSS may be downloaded from this GitHub location.  Upon download, style sheets are placed locally inside the projects folder of MapBox.  (…\Documents\MapBox\project)
 
 ######*Raster Texture Fills*
-Download the raster texture fills, found here: https://github.com/linz/linz_basemaps/tree/master/img, from GitHub and place locally in: \Documents\MapBox\cache.  Texture files required for this project are:
+Download the raster texture fills, found here: https://github.com/linz/linz_basemaps/tree/master/img , from GitHub and place locally in: \Documents\MapBox\cache.  Texture files required for this project are:
 
 - gravelrocks.jpg
 

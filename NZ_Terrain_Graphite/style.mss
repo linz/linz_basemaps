@@ -15,9 +15,10 @@ Map {
   [drval2>50][drval2<=100] {polygon-fill:#CDCDCD; polygon-opacity:0.75;}
   polygon-comp-op: overlay;
   
+  
   [zoom>=9]
     {
-  polygon-pattern-file: url(http://linz.govt.nz/sites/default/files/watertexture.jpg);
+  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/watertexture.jpg");
   polygon-pattern-comp-op: multiply;
     }  
 }
@@ -29,7 +30,7 @@ Map {
   [zoom>=9]
     {
   polygon-pattern-opacity: 0.1;
-  polygon-pattern-file: url(http://linz.govt.nz/sites/default/files/gravelrocks.jpg);
+  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/gravelrocks.jpg");
   polygon-pattern-comp-op: multiply;
     }
   [zoom>=10]{polygon-pattern-opacity: 0.35}
@@ -37,7 +38,7 @@ Map {
 }
 
 /*Hillshade*/
-.layer-2074-band-1 [zoom>=6]
+.layer-2074 [zoom>=6]
 {
   raster-scaling: bilinear;
   raster-colorizer-default-mode: linear;

@@ -17,7 +17,7 @@
 .layer-328 [zoom>=7]
 {
   polygon-fill: #2F6074;
-  polygon-pattern-file: url(http://linz.govt.nz/sites/default/files/basetexture.jpg);
+  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
@@ -25,6 +25,6 @@
 .layer-293 [zoom>=3] 
 {
   polygon-fill: #2F6074;
-  polygon-pattern-file: url(http://linz.govt.nz/sites/default/files/watertexture.jpg);
+  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/watertexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
