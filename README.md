@@ -2,6 +2,7 @@
 
 ![Screenshot Colour Basemap](https://github.com/linz/linz_basemaps/blob/master/img/Colour_GenTwo_Working_Windows_250Bathy.jpeg)
 
+** Before undertaking this project, be sure to download the zipped folder containing all the necessary projects, images, and instructions.  For those unfamiliar, look near the top right of the respository and click "Download ZIP"**
 
 The following instructions detail processes for building LINZ basemaps on Linux and Windows platforms. For best results, it is helpful to have these items in place before starting:
 
