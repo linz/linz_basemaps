@@ -1,4 +1,5 @@
-Map {
+Map 
+{
   background-color: #1E3D4A;
 }
 

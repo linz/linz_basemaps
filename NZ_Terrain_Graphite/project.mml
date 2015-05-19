@@ -59,7 +59,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT * FROM public.nz_coastlines_and_islands_polygons_topo_150k) AS NZ_Coastline",
+        "table": "(SELECT * FROM public.nz_coastlines_and_islands_polygons__topo_1_50k_) AS NZ_Coastline",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -87,7 +87,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(Select * From public.lcdb_33) AS LCDB33",
+        "table": "(Select * From public.lcdb_3_3) AS LCDB33",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -115,7 +115,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT * FROM public.nz_mainland_shingle_polygons_topo_150k) AS Shingle_Topo50",
+        "table": "(SELECT * FROM public.nz_mainland_shingle_polygons__topo__1_50k_) AS Shingle_Topo50",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -143,7 +143,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT * FROM public.nz_mainland_river_centrelines_topo_150k) AS River_CL_Topo50",
+        "table": "(SELECT * FROM public.nz_mainland_river_centrelines__topo__1_50k_) AS River_CL_Topo50",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -171,7 +171,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT * FROM public.nz_mainland_river_polygons_topo_150k) AS River_Polygons",
+        "table": "(SELECT * FROM public.nz_mainland_river_polygons__topo__1_50k_) AS River_Polygons",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -199,7 +199,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT * FROM public.nz_mainland_lake_polygons_topo_150k) AS Lake_Topo50",
+        "table": "(SELECT * FROM public.nz_mainland_lake_polygons__topo__1_50k_) AS Lake_Topo50",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -255,7 +255,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(Select * From public.nz_road_centre_line_electoral) AS Roads_Electrol",
+        "table": "(Select * From public.nz_road_centre_line__electoral_) AS Roads_Electrol",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -286,7 +286,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(Select * From public.nz_mainland_railway_centrelines_topo_150k) AS Rail_CL",
+        "table": "(Select * From public.nz_mainland_railway_centrelines__topo__1_50k_) AS Rail_CL",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -314,7 +314,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(Select * From public.nz_mainland_runway_polygons_topo_150k) AS Runway_Topo",
+        "table": "(Select * From public.nz_mainland_runway_polygons__topo__1_50k_) AS Runway_Topo",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -342,7 +342,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(Select * From public.nz_mainland_track_centrelines_topo_150k) AS Tracks",
+        "table": "(Select * From public.nz_mainland_track_centrelines__topo__1_50k_) AS Tracks",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -457,7 +457,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(Select * From public.nz_mainland_tunnel_centrelines_topo_150k) AS Tunnel_Topo",
+        "table": "(Select * From public.nz_mainland_tunnel_centrelines__topo__1_50k_) AS Tunnel_Topo",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -485,7 +485,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(Select * From public.nz_mainland_bridge_centrelines_topo_150k) AS Bridge_Topo",
+        "table": "(Select * From public.nz_mainland_bridge_centrelines__topo__1_50k_) AS Bridge_Topo",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
