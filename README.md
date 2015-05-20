@@ -139,7 +139,7 @@ FileGDB tables cannot be imported directly to PostgreSQL databases. In Windows, 
 
 Windows:
 
-	FOR /R /D %i in (*.gdb) do (ogr2ogr -f "PostgreSQL" PG:"host=localhost dbname=NZ_Data user=postgres password=postgres" -skipfailures %i)
+	FOR /R /D %i in (*.gdb) do (ogr2ogr -f "PostgreSQL" PG:"host=localhost dbname=NZ_Data user=postgres password=postgres port=5432" -skipfailures %i)
 
 Linux:
 
@@ -156,7 +156,8 @@ When installed, TileMill builds itself into the /Documents folder of Windows and
 Project folders contain style sheets used by TileMill to build each map project.  These folders, NZ Terrain Graphite and NZ Terrain Natural Colour, are contained in the zipped file download at the beginning of this instruction manual.  Layers in each style sheet currently point to the PostgreSQL database.  No modification should be necessary, however, there may be instances where user will need to relink file paths, for example relinking DEM and Hillshade .vrt to each project.  Place the downloaded style sheets locally inside the projects folder of MapBox.  (…\Documents\MapBox\project)
 
 ######*Raster Texture Fills*
-Download the raster texture fills, found here: https://github.com/linz/linz_basemaps/tree/master/img . Place the textures locally in: ...\Documents\MapBox\cache.  Texture files required for this project are:
+
+Raster texture fill are included in the original downloaded package.  They may also be viewed and downloaded here: https://github.com/linz/linz_basemaps/tree/master/img . Place the textures locally in: ...\Documents\MapBox\cache.  Texture files required for this project are:
 
 - gravelrocks.jpg
 
