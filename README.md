@@ -2,9 +2,9 @@
 
 ![Screenshot Colour Basemap](https://github.com/linz/linz_basemaps/blob/master/img/Colour_GenTwo_Working_Windows_250Bathy.jpeg)
 
-#####Before undertaking this project, be sure to download the zipped folder containing all the necessary projects, images, and instructions.  For those unfamiliar, look near the top right of the respository and click "Download ZIP"
+#####Before undertaking this project, be sure to download the zipped folder containing all the necessary projects, images, and instructions.  For those unfamiliar with this type of download, look near the top right of the respository and click "Download ZIP".
 
-The following instructions detail processes for building LINZ basemaps on Linux and Windows platforms. For best results, it is helpful to have these items in place before starting:
+The following instructions detail processes for building LINZ basemaps on Linux and Windows platforms. For best results, it is helpful to have these programs and items in place before starting:
 
 - TileMill https://gist.github.com/bsudekum/b4606871250d9d834b3d
 - PostgreSQL with PostGIS extensions http://postgis.net/ or http://www.postgresql.org
@@ -33,7 +33,7 @@ The latest installs for TileMill, Windows and Linux, are found here:
 
 ######*Set-Up*
 
-Install TileMill as instructed.  Depending on which Linux release users are running, TileMill may have additional build requirements.
+Install TileMill as instructed.  Depending on which Linux release users are running, TileMill may have additional build requirements.  Recent versions of Tilemill built in the Atom Shell merely be downloaded and run from the installed folder without further installation.
 
 
 ####2. PostgreSQL / PostGIS
@@ -69,7 +69,7 @@ allowing spatial functionality of the PostgreSQL database.
 
 ####3. QGIS (OSGeo4W) for Windows or GDAL for Linux users
 
-QGIS provides easy access to GDAL and FileGDB readability via the OSGeo4W Shell in Windows systems.  For this project, access to GDAL and the ability to read FileGDB is required.  Windows systems do not inherently have access to read GDAL via the commandline.  Access is made available by installing OSGeo4W and running commands via the OSGeo4W Shell.  Linux users need only install GDAL through the standard processes providing commands via a standard terminal.
+QGIS provides easy access to GDAL and FileGDB readability via the OSGeo4W Shell in Windows systems.  For this project, access to GDAL and the ability to read FileGDB is required.  Windows systems do not inherently have access to read GDAL via the commandline.  Access is made available by installing OSGeo4W and running commandline processes via the OSGeo4W Shell.  Linux users need only install GDAL through the standard processes providing commands via a standard terminal.
 
 Windows: http://www.qgis.org/en/site/forusers/download.html
 
@@ -83,13 +83,15 @@ Linux users need only to install the GDAL drivers if desired, however, a full in
 ####4. Import Layer Data
 
 
-This project contains a mix of raster and vector data with a combined size of around 21GB.  There is a 3.5GB limit for direct downloads from LDS, so currently, it is not possible to obtain the entire package of vector and raster in a single download.  Vector and hillshade may be broken up and downloaded via LDS; however, DEM rasters require a courier delivery.  It is recommended users combine all data into a couriered package as it is a useful method bundling all necessary tables and rasters on a single stick drive. **ESRI File GDB and GeoTIFF are the recommended layer formats.**  The following link provides access to a package containing vector and raster data needed for base map construction.
+This project contains a mix of raster and vector data with a combined size of around 21GB.  There is a 3.5GB limit for direct downloads from LDS, so currently, it is not possible to obtain the entire package of vector and raster in a single download.  Vector and hillshade may be broken up and downloaded via LDS; however, DEM rasters require a courier delivery.  It is recommended users combine **all data into a couriered package** as it is a useful method bundling all necessary tables and rasters on a single stick drive. **ESRI File GDB and GeoTIFF are the recommended layer formats.**  The following describes obtaining the package containing vector and raster data needed for base map construction.
 
 ######*LDS*
 
-Use this geolink to LDS in order to obtain all layers necessary to rebuild the basemaps. Connecting to LDS with this link selects layers and makes them ready for download. There should be eighteen vector layers and two raster file ready for download. Please note the DEM comments below.
+Use this geolink to LDS in order to preload all layers necessary for rebuilding the basemaps. Connecting to LDS with this link selects layers and prepares them for download. There should be eighteen vector layers and two raster files selected. Please note the comments regarding DEM downloads below.
 
--	https://data.linz.govt.nz/x/p8oaUg 
+-	https://data.linz.govt.nz/x/p8oaUg
+
+After clicking the link, you are taken to the LINZ Data Service (LDS), with the layers preloaded and ready for download.  Look to the top right corner of the LDS website and select “Download or Order”.
 
 ######*DEM*
 
@@ -97,11 +99,15 @@ Currently, due to the DEM exceeding the 3.5GB download limit for LDS, users must
 
 - https://data.linz.govt.nz/layer/1768-nz-8m-digital-elevation-model-2012/
 
+DEM tiles are recommended to be in .tif format.  There 115 separate DEM tiles delivered in a single folder.  This folder should be placed on your local system in an easily accessible place.  Note the file path as you will need it later to create a .vrt and eventually link the DEM data to Tilemill.
+
 ######*Hillshade*
 
 Hillshade tiles are available as a courier service or for direct download. Users are suggested to order the hillshade and DEM as a courier service together at the same time.  Keep all the hillshade tiles in a single folder.
 
 - https://data.linz.govt.nz/layer/2074-nz-8m-hillshade-2014/
+
+Hillshade tiles are recommended to be in .tif format.  There 115 separate hillshade tiles delivered in a single folder.  This folder should be placed on your local system in an easily accessible place.  Note the file path as you will need it later to create a .vrt and eventually link the hillshade data to Tilemill.
 
 ######*The Land Cover Database (LCDB 3.3) at the Land Resource Information Systems Portal (LRIS)*
 
@@ -119,7 +125,7 @@ Bathymetry data is provided by National Institute of Water and Atmospheric Resea
 
 ######*Datasource Projection*
 
-Using WGS84 Web Mercator (EPSG:3857) is suggested to avoid unforeseen projection errors in TileMill and is most suited for standard web mapping applications.  Users may set their desired projection when setting up thier download in LDS.
+**WGS84 Web Mercator (EPSG:3857)** is suggested to avoid unforeseen projection errors in TileMill and is most suited for standard web mapping applications.  Users may select the desired projection for their layers before ordering thier download in LDS.
 
 Using other projections, for example NZTM2000 (EPSG:2193) or WGS84 (EPSG:4326), is possible. The following blog describes the process for changing the source projection for TileMill projects from EPSG:3857 to the desired projection format:
 
@@ -127,7 +133,9 @@ Using other projections, for example NZTM2000 (EPSG:2193) or WGS84 (EPSG:4326), 
 
 ######*FileGDB to PostgreSQL Database Conversion*
 
-FileGDB tables cannot be imported directly to PostgreSQL databases. In Windows, using ogr2ogr command line tool from the GDAL package via the OSGeo4W shell accomplishes this task. Linux users may simply run ogr2ogr if GDAL is properly installed. Importing FileGDB to the PostgreSQL is completed using the following command line functions:
+Once all vector data is obtained, users need to load and convert the File Geodatabase layers to Postgres tables.  The following describes this process. 
+
+FileGDB tables cannot be imported directly to PostgreSQL databases. In Windows, using ogr2ogr command line tool via the OSGeo4W shell accomplishes this task. Linux users may simply run ogr2ogr in the terminal if GDAL is properly installed. Importing FileGDB to the PostgreSQL is completed using the following command line functions (be sure to change directories to the folder containing the data):
 
 Windows:
 
@@ -145,10 +153,10 @@ When installed, TileMill builds itself into the /Documents folder of Windows and
 
 ######*Download Projects*
 
-Project folders contain style sheets used by TileMill to build each map project.  Layers in each style sheet currently point to the PostgreSQL database.  No modification should be necessary, however, there may be instances where user will need to relink file paths, for example relinking DEM and Hillshade vrt to each project.  Style sheets containing the CartoCSS may be downloaded from this GitHub location.  Upon download, style sheets are placed locally inside the projects folder of MapBox.  (…\Documents\MapBox\project)
+Project folders contain style sheets used by TileMill to build each map project.  These folders, NZ Terrain Graphite and NZ Terrain Natural Colour, are contained in the zipped file download at the beginning of this instruction manual.  Layers in each style sheet currently point to the PostgreSQL database.  No modification should be necessary, however, there may be instances where user will need to relink file paths, for example relinking DEM and Hillshade .vrt to each project.  Place the downloaded style sheets locally inside the projects folder of MapBox.  (…\Documents\MapBox\project)
 
 ######*Raster Texture Fills*
-Download the raster texture fills, found here: https://github.com/linz/linz_basemaps/tree/master/img , from GitHub and place locally in: \Documents\MapBox\cache.  Texture files required for this project are:
+Download the raster texture fills, found here: https://github.com/linz/linz_basemaps/tree/master/img . Place the textures locally in: ...\Documents\MapBox\cache.  Texture files required for this project are:
 
 - gravelrocks.jpg
 
@@ -160,11 +168,11 @@ Download the raster texture fills, found here: https://github.com/linz/linz_base
 
 ######*Creating a VRT*
 
-With the raster and hillshade in place, create a .vrt file.  A GDAL virtual format file (VRT) is required for the hillshade and DEM raster, however, are NOT delivered with the raster packages.  Users will need to create these .vrt themselves and embed them into their respective folders.  For those unfamiliar with the vrt format, below is a helpful guide:
+With the raster and hillshade in place, create a .vrt file in the same folder as the respective rasters.  A GDAL virtual format file (VRT) is required for the hillshade and DEM raster, however, are NOT delivered with the raster packages.  Users will need to create these .vrt themselves and embed them into their respective folders.  For those unfamiliar with the vrt format, below is a helpful guide:
 
 - http://www.gdal.org/gdalbuildvrt.html
 
-The following commandline processes will create the required .vrt.  Be sure to change directories, navigating to the folder containing the raster files.  Create the .vrt in the same folder as the raster files.
+The following commandline processes will create a .vrt.  Before running the below commands, be sure to change directories, navigating to the folder containing the raster files.  Create the .vrt in the same folder as the raster files.
 
 *Windows (run through OSGeo4W Command Shell):*
 
