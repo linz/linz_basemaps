@@ -172,9 +172,12 @@ The following commandline processes will create the required .vrt.  Be sure to c
 
 *Linux:*
 
-	find . -name '*.tif' | xargs -P 3 -t -n1 -I % gdalbuildvrt -resolution highest Hillshade_Multiply_Repro_VRT.vrt %
+	gdalbuildvrt -resolution highest Hillshade_Multiply_Repro_VRT.vrt *.tif
 
 
+######*Linking Hillshade and DEM*
+
+Once a project is started for the first time in Tilemill, users are asked to relink the Hillshade and DEM back to the .vrt.  Open the layers tab in the bottom left corner of the Tilemill window, find either the hillshade or DEM layer, and select the pencil shape opening the editor window.  Navigate to where your .vrt is stored, select, and save.
 
 ##Licensing
 
