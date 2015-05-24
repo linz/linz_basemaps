@@ -173,11 +173,13 @@ With the raster and hillshade in place, create a .vrt file in the same folder as
 
 - http://www.gdal.org/gdalbuildvrt.html
 
-The following commandline processes will create a .vrt.  Before running the below commands, be sure to change directories, navigating to the folder containing the raster files.  Create the .vrt in the same folder as the raster files.
+The following GDAL commandline processes will create a .vrt.  A .vrt is needed for both the hillshade and the DEM raster files, so run the GDAL command in both raster folders.  Before running the below commands, be sure to change directories, navigating to the folder containing the raster files.  Create the .vrt in the same folder as the raster files.
 
 *Windows (run through OSGeo4W Command Shell):*
 
-	gdalbuildvrt -resolution highest Hillshade_Multiply_Repro_VRT.vrt *.tif
+	gdalbuildvrt -resolution highest Hillshade_VRT.vrt *.tif
+
+	gdalbuildvrt -resolution highest DEM_VRT.vrt *.tif
 
 *Linux:*
 
