@@ -1,0 +1,56 @@
+{
+  "bounds": [
+    165.5201,
+    -47.8574,
+    179.7364,
+    -33.1376
+  ],
+  "center": [
+    174.397,
+    -40.7639,
+    6
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 22,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "point",
+      "extent": [
+        -178.42287499999998,
+        -52.55507999999999,
+        178.81666666670017,
+        -29.03878778330001
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM \"nz-geodetic-marks\") AS GMarks",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19861943.5908719,-6901120.09327443,19905780.2786876,-3380583.77748804",
+        "host": "localhost",
+        "dbname": "TestDB",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres"
+      },
+      "id": "GMarks",
+      "class": "layer-787",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "GMarks"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "",
+  "description": "",
+  "attribution": ""
+}
