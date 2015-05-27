@@ -4,6 +4,7 @@
 
 #####Before undertaking this project, be sure to download the zipped folder containing all the necessary projects, images, and instructions.  For those unfamiliar with this type of download, look near the top right of the respository and click "Download ZIP".
 
+As part of LINZ’s commitment to the open community, we are releasing all project and support scripts for the LINZ NZ Terrain basemaps for personal basemap creation.
 The following instructions detail processes for building LINZ basemaps on Linux and Windows platforms. For best results, it is helpful to have these programs and items in place before starting:
 
 - TileMill https://gist.github.com/bsudekum/b4606871250d9d834b3d
@@ -14,13 +15,14 @@ The following instructions detail processes for building LINZ basemaps on Linux 
 - DEM and hillshade raster tiles
 - Texture fill patterns
 
-This project employs a collection of vector and raster data derived from the LINZ Data Service(LDS), LRIS by Landcare Research, and the National Institute of Water and Atmospheric Research (NIWA).  For those unfamiliar with LDS, LRIS, or NIWA, the following links will help users become more familiar with these services and the data they provide.
+This project employs a collection of vector and raster data derived from the LINZ Data Service(LDS) and Landcover Database (LCDB 3.3) by Landcare Research.  For those unfamiliar with LDS or LRIS, the following links will help users become more familiar with these services and the data they provide.
+
+######Data for the LCDB 3.3 layer must be downloaded from the Landcare Research website.
 
 - https://data.linz.govt.nz/
 - http://www.linz.govt.nz/data/linz-data-service
 - http://www.linz.govt.nz/data/linz-data-service/getting-started
 - https://lris.scinfo.org.nz/
-- http://www.niwa.co.nz/
 
 ##Project Set-Up
 Reconstructing basemaps requires using TileMill, QGIS, and a PostgreSQL database with PostGIS extensions.  Listed below are links for software and generalised instructions for builds on Linux and Windows systems.
@@ -83,13 +85,13 @@ Linux users need only to install the GDAL drivers if desired, however, a full in
 ####4. Import Layer Data
 
 
-This project contains a mix of raster and vector data with a combined size of around 21GB.  There is a 3.5GB limit for direct downloads from LDS, so currently, it is not possible to obtain the entire package of vector and raster in a single download.  Vector and hillshade may be broken up and downloaded via LDS; however, DEM rasters require a courier delivery.  It is recommended users combine **all data into a couriered package** as it is a useful method bundling all necessary tables and rasters on a single stick drive. **ESRI File GDB and GeoTIFF are the recommended layer formats.**  The following describes obtaining the package containing vector and raster data needed for base map construction.
+This project contains a mix of raster and vector data with a combined size of around 21GB.  There is a 3.5GB limit for direct downloads from LDS, so currently, it is not possible to obtain the entire package of vector and raster in a single download.  Vector and hillshade must be ordered via courier service from LDS; however, DEM rasters require a courier delivery.  It is recommended users combine **all data into a couriered package** as it is a useful method bundling all necessary tables and rasters on a single stick drive. **ESRI File GDB and GeoTIFF are the recommended layer formats.**  The following describes obtaining the package containing vector and raster data needed for base map construction.
 
 ######*LDS*
 
 Use this geolink to LDS in order to preload all layers necessary for rebuilding the basemaps. Connecting to LDS with this link selects layers and prepares them for download. There should be eighteen vector layers and two raster files selected. Please note the comments regarding DEM downloads below.
 
--	https://data.linz.govt.nz/x/p8oaUg
+-	https://data.linz.govt.nz/x/YZb72b
 
 After clicking the link, you are taken to the LINZ Data Service (LDS), with the layers preloaded and ready for download.  Look to the top right corner of the LDS website and select “Download or Order”.
 
@@ -111,21 +113,13 @@ Hillshade tiles are recommended to be in .tif format.  There 115 separate hillsh
 
 ######*The Land Cover Database (LCDB 3.3) at the Land Resource Information Systems Portal (LRIS)*
 
-The Land Cover Database 3.3 (LCDB 3.3), developed by Land Research, is featured prominently in the colour basemap and necessary for both the colour and black & white maps.  Data may be downloaded from the LRIS Portal similarly to the downloading format used by LDS.  When possible, FileGDB is the recommended file format. Below is the link to LRIS and the LCDB 3.3:
+The Land Cover Database 3.3 (LCDB 3.3), developed by Land Research, is featured prominently in the colour basemap and necessary for both the colour and black & white maps.  Data is downloaded from the LRIS Portal similarly to the downloading format used by LDS.  FileGDB is the recommended file format. Below is the link to LRIS and the LCDB 3.3:
 
 - https://lris.scinfo.org.nz/layer/401-lcdb-v33-deprecated/
 
-######*NIWA*
-
-Bathymetry data is provided by National Institute of Water and Atmospheric Research (NIWA) at 250 metre resolution. This layer is found at: 
-
-- http://www.niwa.co.nz/
-- http://www.niwa.co.nz/our-science/oceans/bathymetry
-
-
 ######*Datasource Projection*
 
-**WGS84 Web Mercator (EPSG:3857)** is suggested to avoid unforeseen projection errors in TileMill and is most suited for standard web mapping applications.  Users may select the desired projection for their layers before ordering thier download in LDS.
+**WGS84 Web Mercator (EPSG:3857)** is suggested to avoid unforeseen projection errors in TileMill and is most suited for standard web mapping applications.  Users may select the desired projection for their layers before ordering their download in LDS.
 
 Using other projections, for example NZTM2000 (EPSG:2193) or WGS84 (EPSG:4326), is possible. The following blog describes the process for changing the source projection for TileMill projects from EPSG:3857 to the desired projection format:
 
