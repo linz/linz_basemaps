@@ -17,7 +17,7 @@ The following instructions detail processes for building LINZ basemaps on Linux 
 
 This project employs a collection of vector and raster data derived from the LINZ Data Service(LDS) and Landcover Database (LCDB 3.3) by Landcare Research.  For those unfamiliar with LDS or LRIS, the following links will help users become more familiar with these services and the data they provide.
 
-######Data for the LCDB 3.3 layer must be downloaded from the Landcare Research website.
+#######Data for the LCDB 3.3 layer must be downloaded from the Landcare Research website listed below.
 
 - https://data.linz.govt.nz/
 - http://www.linz.govt.nz/data/linz-data-service
