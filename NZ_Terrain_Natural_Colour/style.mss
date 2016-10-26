@@ -3,8 +3,7 @@ Map
   background-color: #1E3D4A;
 }
 
- /*Bathemetry*/
-.layer-2022 [zoom>=2]
+#bathycoastalmatch 
 {
   [drval2>=-3.6][drval2<=0] {polygon-fill:#FFFFFF;}
   [drval2>0][drval2<=2.0] {polygon-fill:#FFFFFF;}
@@ -18,7 +17,7 @@ Map
    
   [zoom>=9]
     {
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/watertexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/watertexture.jpg");
   polygon-pattern-comp-op: multiply;
     } 
 }
@@ -26,7 +25,7 @@ Map
 .layer-1153 [zoom>=0]
 {
   polygon-fill:#426746;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/gravelrocks.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/gravelrocks.jpg");
   polygon-pattern-comp-op: multiply;
 }
 

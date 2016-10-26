@@ -3,7 +3,7 @@
 {
   polygon-opacity:0.25;
   polygon-fill:#B0B8B5;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/gravelrocks.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/gravelrocks.jpg");
   polygon-pattern-comp-op: multiply;
   [zoom>=8] {polygon-opacity: 0.5;}
   [zoom>=8] {polygon-opacity: 1.0;}
@@ -28,7 +28,7 @@
 .layer-328 [zoom>=8] 
 {
   polygon-fill: #254C5C;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/watertexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/watertexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
@@ -36,7 +36,7 @@
 .layer-293 [zoom>=5] 
 {
   polygon-fill: #254C5C;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/watertexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/watertexture.jpg");
   polygon-pattern-comp-op: multiply;
   polygon-comp-op: overlay;
 }
@@ -46,7 +46,7 @@
 {
   polygon-fill: #48433A;
   polygon-opacity: 0.5;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
@@ -55,7 +55,7 @@
 [name_2008 = "Gravel or Rock"] 
 {
   polygon-fill: #73736C;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
@@ -72,7 +72,7 @@
 {
   polygon-fill: #CAE1FF;
   polygon-comp-op: soft-light;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 	lght/polygon-opacity:0.40;
   	lght/polygon-fill: #CAE1FF;
@@ -87,7 +87,7 @@
 {
   polygon-gamma: 0.75;
   polygon-fill: #23321F;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
   [zoom>=6] {polygon-gamma:1.0;}
   [zoom>=11] {line-color: #23321F; line-width:0.1;}
@@ -100,7 +100,7 @@
 .layer-2021 [zoom>=5][name_2008 = "Sub Alpine Shrubland"]
 {
   polygon-fill: #313E27;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
   [zoom>=11] {line-color: #313E27; line-width:0.1;}
   [zoom>=12] {line-color: #313E27; line-width:1.0;}
@@ -111,7 +111,7 @@
 [zoom>=6]
 {
   polygon-fill: #333333;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
@@ -121,7 +121,7 @@
 {
   polygon-fill: #48433A;
   polygon-opacity: 0.25;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
@@ -131,7 +131,7 @@
 .layer-2021 [zoom>=6][name_2008 = "Herbaceous Freshwater Vegetation"]
 {
   polygon-fill: #23321F;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
@@ -139,7 +139,7 @@
 .layer-2021 [zoom>=6][name_2008 = "Flaxland"]
 {
   polygon-fill: #313E27;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
@@ -148,7 +148,7 @@
 {
   polygon-fill: #48433A;
   polygon-opacity: 0.5;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
@@ -157,7 +157,7 @@
 {
   polygon-fill: #6C7655;
   polygon-opacity: 0.35;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
   
   [zoom>= 6] [lcdb_uid =~ ".*[158]$"] 
@@ -185,6 +185,7 @@
 {
   polygon-fill: #757655;
   polygon-opacity: 0.25;
-  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
+  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
+

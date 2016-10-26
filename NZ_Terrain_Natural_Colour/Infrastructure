@@ -59,8 +59,8 @@
   polygon-opacity: 0.5
 }
 
-/*All_Parcels*/
-.layer-1571 [zoom>=12]
+/*All_Parcels
+.layer-1571 [zoom>=17]
 [status = "Current"]
 [topology_type = "Primary"]
 [parcel_intent != "Hydro"] 
@@ -76,7 +76,7 @@
   [zoom>=16] {line-opacity: 0.35;}
   [zoom>=17] {line-opacity: 0.5;}
   [zoom>=18] {line-width: 0.25;}
-}
+}*/
 
  /*Rail_Centerlines*/
 .layer-319 [zoom>=14]
