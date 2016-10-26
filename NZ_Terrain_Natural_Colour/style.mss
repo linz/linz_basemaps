@@ -17,7 +17,7 @@ Map
    
   [zoom>=9]
     {
-  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/watertexture.jpg");
+  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/watertexture.jpg");
   polygon-pattern-comp-op: multiply;
     } 
 }
@@ -25,7 +25,7 @@ Map
 .layer-1153 [zoom>=0]
 {
   polygon-fill:#426746;
-  polygon-pattern-file: url("/media/ireese/data/DATA/Textures/gravelrocks.jpg");
+  polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/gravelrocks.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
