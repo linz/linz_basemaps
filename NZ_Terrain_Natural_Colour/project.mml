@@ -88,7 +88,7 @@
       "id": "nzdemall",
       "class": "layer-1768",
       "Datasource": {
-        "file": "../webmer_lowres_dem/lowresdem_vrt.vrt",
+        "file": "webmer_lowres_dem/lowresdem_vrt.vrt",
         "band": "1"
       },
       "layer": null,
@@ -561,7 +561,7 @@
       "id": "hillshademultiplyrep",
       "class": "layer-2074",
       "Datasource": {
-        "file": "../hillshadeclip_vrt.vrt",
+        "file": "Hillshade_Multiplied_Repro/Hillshade_Clip/hillshadeclip_vrt.vrt",
         "band": "1"
       },
       "layer": null,
