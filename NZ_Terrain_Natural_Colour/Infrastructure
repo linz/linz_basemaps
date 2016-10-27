@@ -1,6 +1,6 @@
-/*Roads_Background*/
-.layer-2093 [zoom>=9]
-[name_label =~ '(?!ACCESSWAY).*']
+/*roads_background*/
+#basemap_road [zoom>=9]
+[name_label =~ '(?!accessway).*']
 {
   line-width:0.10;
   line-opacity: 0.5;
@@ -8,7 +8,7 @@
   line-smooth: 0.2;
   line-cap: round;
   [zoom>=12] {line-width:0.10;}
-  [zoom>=13] {line-color:#A6A886;}
+  [zoom>=13] {line-color:#a6a886;}
   [zoom>=14] {line-width:0.5; line-opacity:0.5;}
   [zoom>=15] {line-width:2.5; line-opacity:0.65;}
   [zoom>=16] {line-width:5.0; line-opacity:1.0;}
@@ -18,9 +18,9 @@
   [zoom>=20] {line-width:100.0;}
 }
 
-/*Roads_Foreground*/
-.layer-2093::FG [zoom>=15]
-[name_label =~ '(?!ACCESSWAY).*']
+/*roads_foreground*/
+#basemap_road::fg [zoom>=15]
+[name_label =~ '(?!accessway).*']
 {
   line-color: #646161;
   line-width:0.1;
@@ -33,11 +33,11 @@
   [zoom>=20] {line-width:97.0;}
 }
 
-/*StateHighways*/
-.layer-818 [zoom>=12]
-[name =~ 'State Highway.*']
+/*statehighways*/
+#roads_electrol [zoom>=12]
+[name =~ 'state highway.*']
 {
-  line-color:#7B4A4A;
+  line-color:#7b4a4a;
   line-width:0.5; 
   line-opacity: 0.5;
   line-cap: round;
@@ -52,25 +52,25 @@
   [zoom>=20] {line-width: 97.0;}
 }
 
-.layer-2021 [zoom>=8]
-[name_2008 = "Built-up Area (settlement)"] 
+#lcdb33 [zoom>=8]
+[name_2008 = "built-up area (settlement)"] 
 {
   polygon-fill: #333333;
   polygon-opacity: 0.5
 }
 
-/*All_Parcels
+/*all_parcels
 .layer-1571 [zoom>=17]
-[status = "Current"]
-[topology_type = "Primary"]
-[parcel_intent != "Hydro"] 
-[parcel_intent != "Secondary"]
-[parcel_intent != "Road"]
-[parcel_intent != "Railway"]
-[parcel_intent != "Railway Leased"]
-[parcel_intent != "Streambed"]
+[status = "current"]
+[topology_type = "primary"]
+[parcel_intent != "hydro"] 
+[parcel_intent != "secondary"]
+[parcel_intent != "road"]
+[parcel_intent != "railway"]
+[parcel_intent != "railway leased"]
+[parcel_intent != "streambed"]
 {
-  line-color: #FFFFFF;
+  line-color: #ffffff;
   line-width: 0.1;
   line-opacity: 0.1;
   [zoom>=16] {line-opacity: 0.35;}
@@ -78,8 +78,8 @@
   [zoom>=18] {line-width: 0.25;}
 }*/
 
- /*Rail_Centerlines*/
-.layer-319 [zoom>=14]
+ /*rail_centerlines*/
+#rail_cl [zoom>=14]
 {
   line-width: 0.5;
   line-color: #888888;
@@ -106,25 +106,25 @@
 	}
 }
 
-/*Runway*/
-.layer-333 [zoom>=8]
+/*runway*/
+#runway_topo [zoom>=8]
 {
   polygon-fill: #333333;
   polygon-opacity: 0.5
 }
 
-/*Tracks*/
-.layer-364 [zoom>=15]
+/*tracks*/
+#tracks [zoom>=15]
 {
   line-width:0.5;
-  line-color: #A6A886;
+  line-color: #a6a886;
   line-dasharray: 3,3;
 }
 
-/*Tunnel_RoadsOnly_ElectrolAlign*/  
-.layer-2094 [zoom>=16]
+/*tunnel_roadsonly_electrolalign*/  
+#tunnel_basemap [zoom>=16]
 {
-  line-color: #E8E8E8;
+  line-color: #e8e8e8;
   line-width:5.0;
   line-smooth: 0.2;
   line-dasharray: 12,6;
@@ -134,8 +134,8 @@
   [zoom>=20] {line-width:100.0;line-dasharray: 192,96;}
 }
 
-/*Tunnel_RoadsOnly_ElectrolAlign_Foreground*/  
-.layer-2094::FG [zoom>=16]
+/*tunnel_roadsonly_electrolalign_foreground*/  
+#tunnel_basemap::fg [zoom>=16]
 {
   line-color: #888888;
   line-width:2.0;
@@ -147,8 +147,8 @@
   [zoom>=20] {line-width:85.0;}
 }
 
-/*Bridge_CL_ElectrolAlign*/
-.layer-2092 [zoom>=16]
+/*bridge_cl_electrolalign*/
+#bridge_basemap [zoom>=16]
 {
   line-offset: 3.5;
   line-width:2.0;
@@ -196,8 +196,8 @@
 	}
 }
 
-/*Tunnel_forRail*/
-.layer-366 [zoom>=15]
+/*tunnel_forrail*/
+#tunnel_topo [zoom>=15]
 [use1='train']
 {
   line-width: 8.0;
@@ -214,8 +214,8 @@
     {line-width: 100.0; line-opacity: 0.25;}
 }
 
-/*Bridge_forRail*/
-.layer-244 [zoom>=16]
+/*bridge_forrail*/
+#bridge_topo [zoom>=16]
 [use_1='train']
 {
   line-offset: 3.5;

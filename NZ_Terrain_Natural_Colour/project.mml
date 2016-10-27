@@ -24,19 +24,28 @@
     {
       "geometry": "polygon",
       "extent": [
-        162.8613,
-        -49.6107,
-        179.8682,
-        -31.1658
+        162.86130000000028,
+        -49.610699999999994,
+        179.8682000000001,
+        -31.16579999999998
       ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from bathy_coastalmatch) AS bathycoastalmatch",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18129636.9859306,-6379126.92525348,20022836.4339027,-3654300.20091723",
+        "host": "localhost",
+        "dbname": "nz_data",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres"
+      },
       "id": "bathycoastalmatch",
       "class": "",
-      "Datasource": {
-        "file": "/media/ireese/data/DATA/nz_coast_outline/bathy_coastalmatch.shp"
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "bathycoastalmatch"
     },
@@ -50,7 +59,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT * FROM public.nz_coastlines_and_islands_polygons__topo_1_50k_) AS NZ_Coastline",
+        "table": "(select * from public.nz_coastlines_and_islands_polygons__topo_1_50k_) AS nz_coastline",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -61,12 +70,12 @@
         "user": "postgres",
         "password": "postgres"
       },
-      "id": "NZ_Coastline",
+      "id": "nz_coastline",
       "class": "layer-1153",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "NZ_Coastline"
+      "name": "nz_coastline"
     },
     {
       "geometry": "raster",
@@ -79,7 +88,7 @@
       "id": "nzdemall",
       "class": "layer-1768",
       "Datasource": {
-        "file": "/media/ireese/data/DATA/DEMs/webmer_lowres_dem/lowresdem_vrt.vrt",
+        "file": "../webmer_lowres_dem/lowresdem_vrt.vrt",
         "band": "1"
       },
       "layer": null,
@@ -91,7 +100,7 @@
       "name": "nzdemall"
     },
     {
-      "geometry": "unknown",
+      "geometry": "polygon",
       "extent": [
         166.4261493316618,
         -47.290000518688544,
@@ -100,7 +109,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select * from lcdb_3_3) AS LCDB33",
+        "table": "(select * from lcdb_3_3) AS lcdb33",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -109,17 +118,14 @@
         "host": "localhost",
         "port": "5432",
         "user": "postgres",
-        "password": "postgres",
-        "id": "LCDB33",
-        "project": "NZ_Terrain_Natural_Colour",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+        "password": "postgres"
       },
-      "id": "LCDB33",
+      "id": "lcdb33",
       "class": "layer-2021",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "LCDB33"
+      "name": "lcdb33"
     },
     {
       "geometry": "polygon",
@@ -131,7 +137,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT * FROM public.nz_shingle_polygons__topo__1_50k_) AS Shingle_Topo50",
+        "table": "(select * from public.nz_shingle_polygons__topo__1_50k_) AS shingle_topo50",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -142,12 +148,12 @@
         "user": "postgres",
         "password": "postgres"
       },
-      "id": "Shingle_Topo50",
+      "id": "shingle_topo50",
       "class": "layer-342",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "Shingle_Topo50"
+      "name": "shingle_topo50"
     },
     {
       "geometry": "unknown",
@@ -159,7 +165,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT * FROM public.nz_river_centrelines__topo__1_50k_) AS River_CL_Topo50",
+        "table": "(select * from public.nz_river_centrelines__topo__1_50k_) AS river_cl_topo50",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -170,12 +176,12 @@
         "user": "postgres",
         "password": "postgres"
       },
-      "id": "River_CL_Topo50",
+      "id": "river_cl_topo50",
       "class": "layer-327",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "River_CL_Topo50"
+      "name": "river_cl_topo50"
     },
     {
       "geometry": "polygon",
@@ -187,7 +193,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT * FROM public.nz_river_polygons__topo__1_50k_) AS River_Polygons",
+        "table": "(select * from public.nz_river_polygons__topo__1_50k_) AS river_polygons",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -198,12 +204,12 @@
         "user": "postgres",
         "password": "postgres"
       },
-      "id": "River_Polygons",
+      "id": "river_polygons",
       "class": "layer-328",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "River_Polygons"
+      "name": "river_polygons"
     },
     {
       "geometry": "polygon",
@@ -215,7 +221,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT * FROM public.nz_lake_polygons__topo__1_50k_) AS Lake_Topo50",
+        "table": "(select * from public.nz_lake_polygons__topo__1_50k_) AS lake_topo50",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -226,12 +232,12 @@
         "user": "postgres",
         "password": "postgres"
       },
-      "id": "Lake_Topo50",
+      "id": "lake_topo50",
       "class": "layer-293",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "Lake_Topo50"
+      "name": "lake_topo50"
     },
     {
       "geometry": "polygon",
@@ -243,7 +249,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(Select * From public.nz_swamp_polygons__topo__1_50k_) AS Swamp_Topo",
+        "table": "(select * from public.nz_swamp_polygons__topo__1_50k_) AS swamp_topo",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -254,12 +260,12 @@
         "user": "postgres",
         "password": "postgres"
       },
-      "id": "Swamp_Topo",
+      "id": "swamp_topo",
       "class": "layer-359",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "Swamp_Topo"
+      "name": "swamp_topo"
     },
     {
       "geometry": "polygon",
@@ -271,7 +277,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(Select * From nz_rock_polygons__topo__1_50k_) AS Rock_Topo",
+        "table": "(select * from nz_rock_polygons__topo__1_50k_) AS rock_topo",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -282,12 +288,12 @@
         "user": "postgres",
         "password": "postgres"
       },
-      "id": "Rock_Topo",
+      "id": "rock_topo",
       "class": "layer-332",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "Rock_Topo"
+      "name": "rock_topo"
     },
     {
       "geometry": "linestring",
@@ -299,7 +305,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(Select * From nz_terrain_basemap_roads) AS BaseMap_Road",
+        "table": "(select * from nz_terrain_basemap_roads) AS basemap_road",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -310,12 +316,239 @@
         "user": "postgres",
         "password": "postgres"
       },
-      "id": "BaseMap_Road",
+      "id": "basemap_road",
       "class": "layer-2093",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "BaseMap_Road"
+      "name": "basemap_road"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -176.87407923330017,
+        -46.91177043329999,
+        178.54675598329976,
+        -34.429143799999984
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from nz_road_centre_line__electoral_) AS roads_electrol",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19689532.4347801,-5927684.6334527,19875733.9588518,-4086572.1463436",
+        "dbname": "nz_data",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres",
+        "id": "roads_electrol",
+        "project": "Colour_GenTwo_Working_Windows",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "roads_electrol",
+      "class": "layer-818",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "roads_electrol"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        167.93533666636753,
+        -46.600388562520735,
+        178.03076480121675,
+        -35.316090125314645
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from public.nz_railway_centrelines__topo__1_50k_) AS rail_cl",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18694476.163897,-5877089.50579011,19818294.0832085,-4206919.92922339",
+        "dbname": "nz_data",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres"
+      },
+      "id": "rail_cl",
+      "class": "layer-319",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "rail_cl"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        167.57397934056013,
+        -46.90120745503357,
+        178.4529855025644,
+        -34.48996637357695
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from public.nz_runway_polygons__topo__1_50k_) AS runway_topo",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18654250.0503937,-5925963.49655731,19865295.4766849,-4094783.82204094",
+        "dbname": "nz_data",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres"
+      },
+      "id": "runway_topo",
+      "class": "layer-333",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "runway_topo"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        166.61005138215552,
+        -47.25816775998476,
+        178.54423252635164,
+        -34.39688295863601
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from public.nz_track_centrelines__topo__1_50k_) AS tracks",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18546946.0809027,-5984315.90278415,19875453.0489093,-4082219.02496947",
+        "dbname": "nz_data",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres"
+      },
+      "id": "tracks",
+      "class": "layer-364",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "tracks"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        167.9733862457549,
+        -44.76457133159036,
+        175.1601978794957,
+        -36.53363494389244
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from nz_terrain_basemap_tunnels) AS tunnel_basemap",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18698711.8236993,-5584533.89591321,19498744.0351945,-4374299.34816523",
+        "dbname": "nz_data",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres"
+      },
+      "id": "tunnel_basemap",
+      "class": "layer-2094",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "tunnel_basemap"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        167.16841142563192,
+        -46.639613620444855,
+        178.49426274578886,
+        -34.483340001024004
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from nz_terrain_basemap_bridges) AS bridge_basemap",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18609102.4366218,-5883446.95870349,19869890.438382,-4093888.90282591",
+        "dbname": "nz_data",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres"
+      },
+      "id": "bridge_basemap",
+      "class": "layer-2092",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "bridge_basemap"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        167.68697591786895,
+        -46.52610688195376,
+        177.90451908942043,
+        -35.31578242551871
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from public.nz_tunnel_centrelines__topo__1_50k_) AS tunnel_topo",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18666828.7718411,-5865062.80303151,19804240.4748565,-4206877.95133478",
+        "dbname": "nz_data",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres"
+      },
+      "id": "tunnel_topo",
+      "class": "layer-366",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "tunnel_topo"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        166.98531163801653,
+        -46.98274106227755,
+        178.4941613677955,
+        -34.48330421050435
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from public.nz_bridge_centrelines__topo__1_50k_) AS bridge_topo",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "18588719.8615001,-5939257.42937042,19869879.1530354,-4093884.06936018",
+        "dbname": "nz_data",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres"
+      },
+      "id": "bridge_topo",
+      "class": "layer-244",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "bridge_topo"
     },
     {
       "geometry": "raster",
@@ -328,7 +561,7 @@
       "id": "hillshademultiplyrep",
       "class": "layer-2074",
       "Datasource": {
-        "file": "/media/ireese/data/DATA/HILLSHADEs/Hillshade_Multiplied_Repro/Hillshade_Clip/hillshadeclip_vrt.vrt",
+        "file": "../hillshadeclip_vrt.vrt",
         "band": "1"
       },
       "layer": null,
@@ -340,233 +573,35 @@
       "name": "hillshademultiplyrep"
     },
     {
-      "geometry": "linestring",
+      "geometry": "polygon",
       "extent": [
-        -176.87407923330017,
-        -46.91177043329999,
-        178.54675598329976,
-        -34.429143799999984
+        166.42614933178757,
+        -47.290000518599705,
+        178.57815122750625,
+        -34.12956558971645
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(Select * From nz_road_centre_line__electoral_) AS Roads_Electrol",
+        "table": "(select * from lcdb_3_3) AS lcdb_33",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
-        "extent": "-19689532.4347801,-5927684.6334527,19875733.9588518,-4086572.1463436",
-        "dbname": "nz_data",
+        "extent": "18526474.1982999,-5989538.67114997,19879228.8614502,-4046212.81579995",
         "host": "localhost",
+        "dbname": "nz_data",
         "port": "5432",
         "user": "postgres",
         "password": "postgres",
-        "id": "Roads_Electrol",
-        "project": "Colour_GenTwo_Working_Windows",
+        "id": "lcdb_33",
+        "project": "NZ_Terrain_Natural_Colour",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
-      "id": "Roads_Electrol",
-      "class": "layer-818",
+      "id": "lcdb_33",
+      "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "Roads_Electrol"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        167.93533666636753,
-        -46.600388562520735,
-        178.03076480121675,
-        -35.316090125314645
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(Select * From public.nz_railway_centrelines__topo__1_50k_) AS Rail_CL",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "18694476.163897,-5877089.50579011,19818294.0832085,-4206919.92922339",
-        "dbname": "nz_data",
-        "host": "localhost",
-        "port": "5432",
-        "user": "postgres",
-        "password": "postgres"
-      },
-      "id": "Rail_CL",
-      "class": "layer-319",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "Rail_CL"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
-        167.57397934056013,
-        -46.90120745503357,
-        178.4529855025644,
-        -34.48996637357695
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(Select * From public.nz_runway_polygons__topo__1_50k_) AS Runway_Topo",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "18654250.0503937,-5925963.49655731,19865295.4766849,-4094783.82204094",
-        "dbname": "nz_data",
-        "host": "localhost",
-        "port": "5432",
-        "user": "postgres",
-        "password": "postgres"
-      },
-      "id": "Runway_Topo",
-      "class": "layer-333",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "Runway_Topo"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        166.61005138215552,
-        -47.25816775998476,
-        178.54423252635164,
-        -34.39688295863601
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(Select * From public.nz_track_centrelines__topo__1_50k_) AS Tracks",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "18546946.0809027,-5984315.90278415,19875453.0489093,-4082219.02496947",
-        "dbname": "nz_data",
-        "host": "localhost",
-        "port": "5432",
-        "user": "postgres",
-        "password": "postgres"
-      },
-      "id": "Tracks",
-      "class": "layer-364",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "Tracks"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        167.9733862457549,
-        -44.76457133159036,
-        175.1601978794957,
-        -36.53363494389244
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(Select * From public.base_map_tunnel) AS Tunnel_Basemap",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "18698711.8236993,-5584533.89591321,19498744.0351945,-4374299.34816523",
-        "dbname": "nz_data",
-        "host": "localhost",
-        "port": "5432",
-        "user": "postgres",
-        "password": "postgres"
-      },
-      "id": "Tunnel_Basemap",
-      "class": "layer-2094",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "Tunnel_Basemap",
-      "status": "off"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        167.16841142563192,
-        -46.639613620444855,
-        178.49426274578886,
-        -34.483340001024004
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(Select * From public.base_map_bridge) AS Bridge_Basemap",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "18609102.4366218,-5883446.95870349,19869890.438382,-4093888.90282591",
-        "dbname": "nz_data",
-        "host": "localhost",
-        "port": "5432",
-        "user": "postgres",
-        "password": "postgres"
-      },
-      "id": "Bridge_Basemap",
-      "class": "layer-2092",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "Bridge_Basemap",
-      "status": "off"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        167.68697591786895,
-        -46.52610688195376,
-        177.90451908942043,
-        -35.31578242551871
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(Select * From public.nz_tunnel_centrelines__topo__1_50k_) AS Tunnel_Topo",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "18666828.7718411,-5865062.80303151,19804240.4748565,-4206877.95133478",
-        "dbname": "nz_data",
-        "host": "localhost",
-        "port": "5432",
-        "user": "postgres",
-        "password": "postgres"
-      },
-      "id": "Tunnel_Topo",
-      "class": "layer-366",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "Tunnel_Topo"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        166.98531163801653,
-        -46.98274106227755,
-        178.4941613677955,
-        -34.48330421050435
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(Select * From public.nz_bridge_centrelines__topo__1_50k_) AS Bridge_Topo",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "18588719.8615001,-5939257.42937042,19869879.1530354,-4093884.06936018",
-        "dbname": "nz_data",
-        "host": "localhost",
-        "port": "5432",
-        "user": "postgres",
-        "password": "postgres"
-      },
-      "id": "Bridge_Topo",
-      "class": "layer-244",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "Bridge_Topo"
+      "name": "lcdb_33"
     }
   ],
   "scale": 1,

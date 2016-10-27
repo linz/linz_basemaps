@@ -1,113 +1,113 @@
 /*shingle_topo50*/
-.layer-342 [zoom>=5] 
+#shingle_topo50 [zoom>=5] 
 {
   polygon-opacity:0.25;
-  polygon-fill:#B0B8B5;
+  polygon-fill:#b0b8b5;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/gravelrocks.jpg");
   polygon-pattern-comp-op: multiply;
   [zoom>=8] {polygon-opacity: 0.5;}
   [zoom>=8] {polygon-opacity: 1.0;}
 }
 
-/*River_CL_Topo50*/
-.layer-327 [zoom>=10] 
+/*river_cl_topo50*/
+#river_cl_topo50 [zoom>=10] 
 {
   line-width:0.05;
-  line-color: #254C5C;
+  line-color: #254c5c;
   line-smooth: 0.2;
-  [zoom>=11] {line-color:#254C5C; line-width: 0.25;}
-  [zoom>=13] {line-color:#254C5C; line-width: 0.5;}
-  [zoom>=15] {line-color:#254C5C; line-width: 2.0;}
-  [zoom>=17] {line-color:#254C5C; line-width: 3.5;}
-  [zoom>=18] {line-color:#254C5C; line-width: 8.5;}
-  [zoom>=19] {line-color:#254C5C; line-width: 15.5;}
-  [zoom>=20] {line-color:#254C5C; line-width: 25.5;}
+  [zoom>=11] {line-color:#254c5c; line-width: 0.25;}
+  [zoom>=13] {line-color:#254c5c; line-width: 0.5;}
+  [zoom>=15] {line-color:#254c5c; line-width: 2.0;}
+  [zoom>=17] {line-color:#254c5c; line-width: 3.5;}
+  [zoom>=18] {line-color:#254c5c; line-width: 8.5;}
+  [zoom>=19] {line-color:#254c5c; line-width: 15.5;}
+  [zoom>=20] {line-color:#254c5c; line-width: 25.5;}
 }
 
-/*River_Poly_Topo50*/
-.layer-328 [zoom>=8] 
+/*river_poly_topo50*/
+#river_polygons [zoom>=8] 
 {
-  polygon-fill: #254C5C;
+  polygon-fill: #254c5c;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/watertexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
-/*Lake_Poly_Topo50*/
-.layer-293 [zoom>=5] 
+/*lake_poly_topo50*/
+#lake_topo50 [zoom>=5] 
 {
-  polygon-fill: #254C5C;
+  polygon-fill: #254c5c;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/watertexture.jpg");
   polygon-pattern-comp-op: multiply;
   polygon-comp-op: overlay;
 }
 
-/*Swamp_Topo*/
-.layer-359 [zoom>=10] 
+/*swamp_topo*/
+#swamp_topo [zoom>=10] 
 {
-  polygon-fill: #48433A;
+  polygon-fill: #48433a;
   polygon-opacity: 0.5;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
-/*LCDB 3.3*/
-.layer-2021 [zoom>=6]
-[name_2008 = "Gravel or Rock"] 
+/*lcdb 3.3*/
+#lcdb33 [zoom>=6]
+[name_2008 = "gravel or rock"] 
 {
-  polygon-fill: #73736C;
+  polygon-fill: #73736c;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
-/*Rock_Topo*/
-.layer-332 [zoom>=6]
+/*rock_topo*/
+#rock_topo [zoom>=6]
 {
   polygon-fill: #333333;
   polygon-opacity: 1.0;
 }
 
-/*LCDB 3.3*/
-.layer-2021 [zoom>=5]
-[name_2008 = "Permanent Snow and Ice"] 
+/*lcdb 3.3*/
+#lcdb33 [zoom>=5]
+[name_2008 = "permanent snow and ice"] 
 {
-  polygon-fill: #CAE1FF;
+  polygon-fill: #cae1ff;
   polygon-comp-op: soft-light;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 	lght/polygon-opacity:0.40;
-  	lght/polygon-fill: #CAE1FF;
+  	lght/polygon-fill: #cae1ff;
 }
 
-/*LCDB 3.3*/
-.layer-2021 [zoom>=5][name_2008 = "Forest - Harvested"],
-.layer-2021 [zoom>=5][name_2008 = "Broadleaved Indigenous Hardwoods"],
-.layer-2021 [zoom>=5][name_2008 = "Exotic Forest"],
-.layer-2021 [zoom>=5][name_2008 = "Deciduous Hardwoods"],
-.layer-2021 [zoom>=5][name_2008 = "Indigenous Forest"]
+/*lcdb 3.3*/
+#lcdb33 [zoom>=5][name_2008 = "forest - harvested"],
+#lcdb33 [zoom>=5][name_2008 = "broadleaved indigenous hardwoods"],
+#lcdb33 [zoom>=5][name_2008 = "exotic forest"],
+#lcdb33 [zoom>=5][name_2008 = "deciduous hardwoods"],
+#lcdb33 [zoom>=5][name_2008 = "indigenous forest"]
 {
   polygon-gamma: 0.75;
-  polygon-fill: #23321F;
+  polygon-fill: #23321f;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
   [zoom>=6] {polygon-gamma:1.0;}
-  [zoom>=11] {line-color: #23321F; line-width:0.1;}
-  [zoom>=12] {line-color: #23321F; line-width:1.0;}
+  [zoom>=11] {line-color: #23321f; line-width:0.1;}
+  [zoom>=12] {line-color: #23321f; line-width:1.0;}
 }
 
-/*LCDB 3.3*/
-.layer-2021 [zoom>=5][name_2008 = "Manuka and/or Kanuka"],
-.layer-2021 [zoom>=5][name_2008 = "Mixed Exotic Shrubland"],
-.layer-2021 [zoom>=5][name_2008 = "Sub Alpine Shrubland"]
+/*lcdb 3.3*/
+#lcdb33 [zoom>=5][name_2008 = "manuka and/or kanuka"],
+#lcdb33 [zoom>=5][name_2008 = "mixed exotic shrubland"],
+#lcdb33 [zoom>=5][name_2008 = "sub alpine shrubland"]
 {
-  polygon-fill: #313E27;
+  polygon-fill: #313e27;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
-  [zoom>=11] {line-color: #313E27; line-width:0.1;}
-  [zoom>=12] {line-color: #313E27; line-width:1.0;}
+  [zoom>=11] {line-color: #313e27; line-width:0.1;}
+  [zoom>=12] {line-color: #313e27; line-width:1.0;}
 }
 
-/*LCDB 3.3*/
-.layer-2021 [name_2008 = "Sand or Gravel"]
+/*lcdb 3.3*/
+#lcdb33 [name_2008 = "sand or gravel"]
 [zoom>=6]
 {
   polygon-fill: #333333;
@@ -115,73 +115,73 @@
   polygon-pattern-comp-op: multiply;
 }
 
-/*LCDB 3.3*/
-.layer-2021 [zoom>=5][name_2008 = "Alpine Grass/Herbfield"],
-.layer-2021 [zoom>=5][name_2008 = "Low Producing Grassland"]
+/*lcdb 3.3*/
+#lcdb33 [zoom>=5][name_2008 = "alpine grass/herbfield"],
+#lcdb33 [zoom>=5][name_2008 = "low producing grassland"]
 {
-  polygon-fill: #48433A;
+  polygon-fill: #48433a;
   polygon-opacity: 0.25;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
-/*LCDB 3.3*/
-.layer-2021 [zoom>=6][name_2008 = "Gorse and/or Broom"],
-.layer-2021 [zoom>=6][name_2008 = "Fernland"],
-.layer-2021 [zoom>=6][name_2008 = "Herbaceous Freshwater Vegetation"]
+/*lcdb 3.3*/
+#lcdb33 [zoom>=6][name_2008 = "gorse and/or broom"],
+#lcdb33 [zoom>=6][name_2008 = "fernland"],
+#lcdb33 [zoom>=6][name_2008 = "herbaceous freshwater vegetation"]
 {
-  polygon-fill: #23321F;
+  polygon-fill: #23321f;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
-/*LCDB 3.3*/
-.layer-2021 [zoom>=6][name_2008 = "Flaxland"]
+/*lcdb 3.3*/
+#lcdb33 [zoom>=6][name_2008 = "flaxland"]
 {
-  polygon-fill: #313E27;
+  polygon-fill: #313e27;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
-/*LCDB 3.3*/
-.layer-2021 [zoom>=6][name_2008="Matagouri or Grey Scrub"]
+/*lcdb 3.3*/
+#lcdb33 [zoom>=6][name_2008="matagouri or grey scrub"]
 {
-  polygon-fill: #48433A;
+  polygon-fill: #48433a;
   polygon-opacity: 0.5;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
 }
 
-/*LCDB 3.3*/
-.layer-2021 [zoom>=5][name_2008="Short-rotation Cropland"]
+/*lcdb 3.3*/
+#lcdb33 [zoom>=5][name_2008="short-rotation cropland"]
 {
-  polygon-fill: #6C7655;
+  polygon-fill: #6c7655;
   polygon-opacity: 0.35;
   polygon-pattern-file: url("http://linz.govt.nz/sites/default/files/basetexture.jpg");
   polygon-pattern-comp-op: multiply;
   
   [zoom>= 6] [lcdb_uid =~ ".*[158]$"] 
-  	{tx/polygon-opacity: 0.25; tx/polygon-fill: #E8E8E8;}
+  	{tx/polygon-opacity: 0.25; tx/polygon-fill: #e8e8e8;}
   
   [zoom>= 6] [lcdb_uid =~ ".*[1]$"] 
-  	{tx/polygon-opacity: 0.1; tx/polygon-fill: #E5E5E5;}
+  	{tx/polygon-opacity: 0.1; tx/polygon-fill: #e5e5e5;}
   
   [zoom>= 6] [lcdb_uid =~ ".*[4]$"] 
-  	{tx/polygon-opacity: 0.2; tx/polygon-fill: #ADA89F;}
+  	{tx/polygon-opacity: 0.2; tx/polygon-fill: #ada89f;}
   
   [zoom>= 6] [lcdb_uid =~ ".*[7]$"] 
-  	{tx/polygon-opacity: 0.05; tx/polygon-fill: #CDCDCD;}
+  	{tx/polygon-opacity: 0.05; tx/polygon-fill: #cdcdcd;}
   
   [zoom>= 6] [lcdb_uid =~ ".*[329]$"] 
-  	{ polygon-opacity: 0.25; polygon-fill: #6C7655;}
+  	{ polygon-opacity: 0.25; polygon-fill: #6c7655;}
   
   [zoom>= 6] [lcdb_uid =~ ".*[52]$"] 
   	{polygon-opacity: 0.25; polygon-fill: #757655;}
 }
 
-/*LCDB 3.3*/
-.layer-2021 [zoom>=5]
-[name_2008 = "Depleted Grassland"]
+/*lcdb 3.3*/
+#lcdb33 [zoom>=5]
+[name_2008 = "depleted grassland"]
 {
   polygon-fill: #757655;
   polygon-opacity: 0.25;
