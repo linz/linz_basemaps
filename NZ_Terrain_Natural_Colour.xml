@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#1e3d4a">
+
+<Parameters>
+  <Parameter name="bounds">165.564,-47.8205,179.5386,-33.6238</Parameter>
+  <Parameter name="center">174.1992,-41.1373,6</Parameter>
+  <Parameter name="format">png8</Parameter>
+  <Parameter name="minzoom">1</Parameter>
+  <Parameter name="maxzoom">18</Parameter>
+  <Parameter name="scale">1</Parameter>
+  <Parameter name="metatile">4</Parameter>
+  <Parameter name="id"><![CDATA[NZ_Terrain_Natural_Colour]]></Parameter>
+  <Parameter name="_updated">1478555484000</Parameter>
+  <Parameter name="tilejson"><![CDATA[2.0.0]]></Parameter>
+  <Parameter name="scheme"><![CDATA[xyz]]></Parameter>
+</Parameters>
+
+
+<Style name="bathycoastalmatch" filter-mode="first">
+  <Rule>
+    <Filter>([drval2] &gt; 50) and ([drval2] &lt;= 100)</Filter>
+    <PolygonSymbolizer fill="#cdcdcd" fill-opacity="0.75" comp-op="overlay" />
+  </Rule>
+  <Rule>
+    <Filter>([drval2] &gt; 30) and ([drval2] &lt;= 50)</Filter>
+    <PolygonSymbolizer fill="#d1d1d1" comp-op="overlay" />
+  </Rule>
+  <Rule>
+    <Filter>([drval2] &gt; 20) and ([drval2] &lt;= 30)</Filter>
+    <PolygonSymbolizer fill="#dcdcdc" comp-op="overlay" />
+  </Rule>
+  <Rule>
+    <Filter>([drval2] &gt; 10) and ([drval2] &lt;= 20)</Filter>
+    <PolygonSymbolizer fill="#e0e0e0" comp-op="overlay" />
+  </Rule>
+  <Rule>
+    <Filter>([drval2] &gt; 5) and ([drval2] &lt;= 10)</Filter>
+    <PolygonSymbolizer fill="#e8e8e8" comp-op="overlay" />
+  </Rule>
+  <Rule>
+    <Filter>([drval2] &gt; 2) and ([drval2] &lt;= 5)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="overlay" />
+  </Rule>
+  <Rule>
+    <Filter>([drval2] &gt; 0) and ([drval2] &lt;= 2)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="overlay" />
+  </Rule>
+  <Rule>
+    <Filter>([drval2] &gt;= -3.6) and ([drval2] &lt;= 0)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="overlay" />
+  </Rule>
+  <Rule>
+    <PolygonSymbolizer comp-op="overlay" />
+  </Rule>
+</Style>
+<Layer name="bathycoastalmatch"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>bathycoastalmatch</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from bathy_coastalmatch) AS bathycoastalmatch]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18129636.9859306,-6379126.92525348,20022836.4339027,-3654300.20091723]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="sand" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill-opacity="0.5" fill="#333333" />
+  </Rule>
+</Style>
+<Layer name="sand"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>sand</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from nz_sand_polygons__topo__1_50k_) as sand]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18527786.5524502,-5984113.41895008,19875967.2245998,-4084160.62054992]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="mud" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill-opacity="0.2" fill="#48433a" />
+  </Rule>
+</Style>
+<Layer name="mud"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>mud</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from nz_mud_polygons__topo__1_50k_) as mud]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18540312.3066001,-5981859.20184994,19850112.1058998,-4092413.44700003]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="nz_coastline" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#426746" />
+    <PolygonPatternSymbolizer file="/home/ireese/Documents/MapBox/cache/c6952154-gravelrocks.jpg" comp-op="multiply" />
+  </Rule>
+</Style>
+<Layer name="nz_coastline"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>nz_coastline</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from public.nz_coastlines_and_islands_polygons__topo_1_50k_) AS nz_coastline]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-19906876.6509161,-6913176.78084885,19933735.6608056,-3405123.7317536]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="nzdemall" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <RasterSymbolizer opacity="0.6" scaling="bilinear" default-mode="linear" default-color="rgba(0, 0, 0, 0)" >
+	<stop value="-30" color="rgba(0, 0, 0, 0)" /> 
+	<stop value="550" color="#ada89f" /> 
+	<stop value="575" color="#8a8376" /> 
+	<stop value="605" color="#7c766b" /> 
+	<stop value="2000" color="#6f695f" /> 
+	<stop value="2500" color="#615c53" /> 
+	<stop value="3000" color="#ffffff" /> 
+	<stop value="3740.283936" color="#ffffff" /></RasterSymbolizer>
+  </Rule>
+</Style>
+<Layer name="nzdemall"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>nzdemall</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/ireese/Documents/MapBox/project/NZ_Terrain_Natural_Colour/layers/nzdemall.vrt]]></Parameter>
+       <Parameter name="band"><![CDATA[1]]></Parameter>
+       <Parameter name="type"><![CDATA[gdal]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="lcdb33" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[52]$')) and ([lcdb_uid].match('.*[7]$'))</Filter>
+    <PolygonSymbolizer fill-opacity="0.05" fill="#cdcdcd" />
+    <PolygonSymbolizer fill-opacity="0.25" fill="#757655" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[52]$')) and ([lcdb_uid].match('.*[7]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[52]$')) and ([lcdb_uid].match('.*[4]$'))</Filter>
+    <PolygonSymbolizer fill-opacity="0.2" fill="#ada89f" />
+    <PolygonSymbolizer fill-opacity="0.25" fill="#757655" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[52]$')) and ([lcdb_uid].match('.*[4]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[52]$')) and ([lcdb_uid].match('.*[1]$'))</Filter>
+    <PolygonSymbolizer fill-opacity="0.1" fill="#e5e5e5" />
+    <PolygonSymbolizer fill-opacity="0.25" fill="#757655" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[52]$')) and ([lcdb_uid].match('.*[1]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[52]$')) and ([lcdb_uid].match('.*[158]$'))</Filter>
+    <PolygonSymbolizer fill-opacity="0.25" fill="#e8e8e8" />
+    <PolygonSymbolizer fill-opacity="0.25" fill="#757655" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[52]$')) and ([lcdb_uid].match('.*[158]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[52]$'))</Filter>
+    <PolygonSymbolizer fill-opacity="0.25" fill="#757655" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[52]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[329]$')) and ([lcdb_uid].match('.*[7]$'))</Filter>
+    <PolygonSymbolizer fill-opacity="0.05" fill="#cdcdcd" />
+    <PolygonSymbolizer fill-opacity="0.25" fill="#6c7655" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[329]$')) and ([lcdb_uid].match('.*[7]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[329]$')) and ([lcdb_uid].match('.*[4]$'))</Filter>
+    <PolygonSymbolizer fill-opacity="0.2" fill="#ada89f" />
+    <PolygonSymbolizer fill-opacity="0.25" fill="#6c7655" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[329]$')) and ([lcdb_uid].match('.*[4]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[329]$')) and ([lcdb_uid].match('.*[1]$'))</Filter>
+    <PolygonSymbolizer fill-opacity="0.1" fill="#e5e5e5" />
+    <PolygonSymbolizer fill-opacity="0.25" fill="#6c7655" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[329]$')) and ([lcdb_uid].match('.*[1]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[329]$')) and ([lcdb_uid].match('.*[158]$'))</Filter>
+    <PolygonSymbolizer fill-opacity="0.25" fill="#e8e8e8" />
+    <PolygonSymbolizer fill-opacity="0.25" fill="#6c7655" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[329]$')) and ([lcdb_uid].match('.*[158]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[329]$'))</Filter>
+    <PolygonSymbolizer fill-opacity="0.25" fill="#6c7655" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[329]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[7]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+    <PolygonSymbolizer fill-opacity="0.05" fill="#cdcdcd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[7]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[4]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+    <PolygonSymbolizer fill-opacity="0.2" fill="#ada89f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[4]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[1]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+    <PolygonSymbolizer fill-opacity="0.1" fill="#e5e5e5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[1]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[158]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+    <PolygonSymbolizer fill-opacity="0.25" fill="#e8e8e8" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland') and ([lcdb_uid].match('.*[158]$'))</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'manuka and/or kanuka')</Filter>
+    <PolygonSymbolizer fill="#313e27" />
+    <LineSymbolizer stroke="#313e27" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([name_2008] = 'manuka and/or kanuka')</Filter>
+    <PolygonSymbolizer fill="#313e27" />
+    <LineSymbolizer stroke="#313e27" stroke-width="0.1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([name_2008] = 'manuka and/or kanuka')</Filter>
+    <PolygonSymbolizer fill="#313e27" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'mixed exotic shrubland')</Filter>
+    <PolygonSymbolizer fill="#313e27" />
+    <LineSymbolizer stroke="#313e27" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([name_2008] = 'mixed exotic shrubland')</Filter>
+    <PolygonSymbolizer fill="#313e27" />
+    <LineSymbolizer stroke="#313e27" stroke-width="0.1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([name_2008] = 'mixed exotic shrubland')</Filter>
+    <PolygonSymbolizer fill="#313e27" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'sub alpine shrubland')</Filter>
+    <PolygonSymbolizer fill="#313e27" />
+    <LineSymbolizer stroke="#313e27" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([name_2008] = 'sub alpine shrubland')</Filter>
+    <PolygonSymbolizer fill="#313e27" />
+    <LineSymbolizer stroke="#313e27" stroke-width="0.1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([name_2008] = 'sub alpine shrubland')</Filter>
+    <PolygonSymbolizer fill="#313e27" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'deciduous hardwoods')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+    <LineSymbolizer stroke="#23321f" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([name_2008] = 'deciduous hardwoods')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+    <LineSymbolizer stroke="#23321f" stroke-width="0.1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([name_2008] = 'deciduous hardwoods')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'deciduous hardwoods')</Filter>
+    <PolygonSymbolizer gamma="0.75" fill="#23321f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'indigenous forest')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+    <LineSymbolizer stroke="#23321f" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([name_2008] = 'indigenous forest')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+    <LineSymbolizer stroke="#23321f" stroke-width="0.1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([name_2008] = 'indigenous forest')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'indigenous forest')</Filter>
+    <PolygonSymbolizer gamma="0.75" fill="#23321f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'exotic forest')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+    <LineSymbolizer stroke="#23321f" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([name_2008] = 'exotic forest')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+    <LineSymbolizer stroke="#23321f" stroke-width="0.1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([name_2008] = 'exotic forest')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'exotic forest')</Filter>
+    <PolygonSymbolizer gamma="0.75" fill="#23321f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'broadleaved indigenous hardwoods')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+    <LineSymbolizer stroke="#23321f" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([name_2008] = 'broadleaved indigenous hardwoods')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+    <LineSymbolizer stroke="#23321f" stroke-width="0.1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([name_2008] = 'broadleaved indigenous hardwoods')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'broadleaved indigenous hardwoods')</Filter>
+    <PolygonSymbolizer gamma="0.75" fill="#23321f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'forest - harvested')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+    <LineSymbolizer stroke="#23321f" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([name_2008] = 'forest - harvested')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+    <LineSymbolizer stroke="#23321f" stroke-width="0.1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([name_2008] = 'forest - harvested')</Filter>
+    <PolygonSymbolizer gamma="1" fill="#23321f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([name_2008] = 'forest - harvested')</Filter>
+    <PolygonSymbolizer gamma="0.75" fill="#23321f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'depleted grassland')</Filter>
+    <PolygonSymbolizer fill="#757655" fill-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'short-rotation cropland')</Filter>
+    <PolygonSymbolizer fill="#6c7655" fill-opacity="0.35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'matagouri or grey scrub')</Filter>
+    <PolygonSymbolizer fill="#48433a" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'flaxland')</Filter>
+    <PolygonSymbolizer fill="#313e27" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'herbaceous freshwater vegetation')</Filter>
+    <PolygonSymbolizer fill="#23321f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'fernland')</Filter>
+    <PolygonSymbolizer fill="#23321f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'gorse and/or broom')</Filter>
+    <PolygonSymbolizer fill="#23321f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'alpine grass/herbfield')</Filter>
+    <PolygonSymbolizer fill="#48433a" fill-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'low producing grassland')</Filter>
+    <PolygonSymbolizer fill="#48433a" fill-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'sand or gravel')</Filter>
+    <PolygonSymbolizer fill="#333333" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'permanent snow and ice')</Filter>
+    <PolygonSymbolizer fill="#cae1ff" comp-op="soft-light" />
+    <PolygonSymbolizer fill-opacity="0.4" fill="#cae1ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([name_2008] = 'built-up area (settlement)')</Filter>
+    <PolygonSymbolizer fill="#333333" fill-opacity="0.35" />
+  </Rule>
+</Style>
+<Layer name="lcdb33"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>lcdb33</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from lcdb_3_3) AS lcdb33]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18526474.1982999,-5989538.67114997,19879228.8614502,-4046212.81579995]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="shingle_topo50" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <PolygonSymbolizer fill-opacity="1" fill="#b0b8b5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <PolygonSymbolizer fill-opacity="0.25" fill="#b0b8b5" />
+  </Rule>
+</Style>
+<Layer name="shingle_topo50"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>shingle_topo50</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from public.nz_shingle_polygons__topo__1_50k_) AS shingle_topo50]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18538343.465002,-5936635.93972358,19868645.4760859,-4099486.77523877]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="river_cl_topo50" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <LineSymbolizer stroke="#254c5c" stroke-width="2" smooth="0.2" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <LineSymbolizer stroke="#254c5c" stroke-width="0.75" smooth="0.2" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke="#254c5c" stroke-width="0.25" smooth="0.2" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.05" stroke="#254c5c" smooth="0.2" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Layer name="river_cl_topo50"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>river_cl_topo50</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from public.nz_river_centrelines__topo__1_50k_) AS river_cl_topo50]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18527392.3948953,-5988402.38853336,19875310.4680411,-4048422.86950289]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="river_polygons" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <PolygonSymbolizer fill="#1e3d4a" />
+  </Rule>
+</Style>
+<Layer name="river_polygons"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>river_polygons</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from public.nz_river_polygons__topo__1_50k_) AS river_polygons]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18527252.6009201,-5963619.0747222,19875671.7109143,-4085578.8329294]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="lake_topo50" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <PolygonSymbolizer fill="#2e3f48" comp-op="overlay" />
+  </Rule>
+</Style>
+<Layer name="lake_topo50"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>lake_topo50</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from public.nz_lake_polygons__topo__1_50k_) AS lake_topo50]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18533586.8078167,-5985950.36125328,19875255.1803958,-4086018.26447563]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="moraine" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill-opacity="1" fill="#b0b8b5" />
+  </Rule>
+</Style>
+<Layer name="moraine"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>moraine</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from nz_moraine_polygons__topo__1_50k_) as moraine]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18735769.2577,-5550187.33529997,19039719.1724501,-5337798.21399999]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="lagoon" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill-opacity="0.5" fill="#356b82" />
+  </Rule>
+</Style>
+<Layer name="lagoon"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>lagoon</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from nz_lagoon_polygons__topo__1_50k_) as lagoon]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18719016.9394999,-5905156.8048501,19808270.8712502,-4089852.07695007]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="swamp_topo" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <PolygonSymbolizer fill="#48433a" fill-opacity="0.5" />
+  </Rule>
+</Style>
+<Layer name="swamp_topo"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>swamp_topo</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from public.nz_swamp_polygons__topo__1_50k_) AS swamp_topo]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18541324.9438793,-5983734.80599583,19870453.1308083,-4084925.55542937]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="rock_topo" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <PolygonSymbolizer fill="#333333" fill-opacity="1" />
+  </Rule>
+</Style>
+<Layer name="rock_topo"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>rock_topo</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from nz_rock_polygons__topo__1_50k_) AS rock_topo]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18526679.6903798,-5989690.20519456,19879215.3453421,-4046169.12751685]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="rail_cl" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="2.5" stroke="#777777" />
+    <LineSymbolizer stroke-width="8" stroke="#777777" stroke-dasharray="5, 100" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <LineSymbolizer stroke-width="1" stroke="#777777" />
+    <LineSymbolizer stroke-width="6" stroke="#777777" stroke-dasharray="3, 50" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.5" stroke="#777777" />
+    <LineSymbolizer stroke-width="1.5" stroke="#777777" stroke-dasharray="1, 5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.5" stroke="#5f5f5f" />
+    <LineSymbolizer stroke-width="1.5" stroke="#5f5f5f" stroke-dasharray="1, 5" />
+  </Rule>
+</Style>
+<Layer name="rail_cl"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>rail_cl</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from public.nz_railway_centrelines__topo__1_50k_) AS rail_cl]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18694476.163897,-5877089.50579011,19818294.0832085,-4206919.92922339]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="runway_topo" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <PolygonSymbolizer fill="#333333" fill-opacity="0.5" />
+  </Rule>
+</Style>
+<Layer name="runway_topo"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>runway_topo</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from public.nz_runway_polygons__topo__1_50k_) AS runway_topo]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18654250.0503937,-5925963.49655731,19865295.4766849,-4094783.82204094]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tracks" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="0.75" stroke="#a6a886" stroke-dasharray="12, 6" stroke-opacity="0.25" />
+  </Rule>
+</Style>
+<Layer name="tracks"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tracks</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from public.nz_track_centrelines__topo__1_50k_) AS tracks]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18546946.0809027,-5984315.90278415,19875453.0489093,-4082219.02496947]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="toporoad-unmetalled" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([surface] = 'unmetalled') and ([hway_num] = null) and ([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*8" stroke="rgba(0, 0, 0, 0)" stroke-linecap="round" smooth="0.2" />
+    <LineSymbolizer stroke-opacity="0.5" stroke-dasharray="60, 30" stroke-width="[lane_count]*8" stroke="#352c2c" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([surface] = 'unmetalled') and ([hway_num] = null) and ([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*6" stroke="rgba(0, 0, 0, 0)" stroke-linecap="round" smooth="0.2" />
+    <LineSymbolizer stroke-opacity="0.5" stroke-dasharray="60, 30" stroke-width="[lane_count]*6" stroke="#352c2c" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([surface] = 'unmetalled') and ([hway_num] = null) and ([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke="rgba(0, 0, 0, 0)" stroke-width="[lane_count]*2.5" stroke-linecap="round" smooth="0.2" />
+    <LineSymbolizer stroke-opacity="0.5" stroke-dasharray="24, 12" stroke="#352c2c" stroke-width="[lane_count]*2.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([surface] = 'unmetalled') and ([hway_num] = null) and ([lane_count] &gt; 1)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*6" stroke="rgba(0, 0, 0, 0)" stroke-linecap="round" smooth="0.2" />
+    <LineSymbolizer stroke-opacity="0.35" stroke-dasharray="60, 30" stroke-width="[lane_count]*6" stroke="#c9bebe" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([surface] = 'unmetalled') and ([hway_num] = null) and ([lane_count] &gt; 1)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*4" stroke="rgba(0, 0, 0, 0)" stroke-linecap="round" smooth="0.2" />
+    <LineSymbolizer stroke-opacity="0.35" stroke-dasharray="60, 30" stroke-width="[lane_count]*4" stroke="#c9bebe" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([surface] = 'unmetalled') and ([hway_num] = null) and ([lane_count] &gt; 1)</Filter>
+    <LineSymbolizer stroke="rgba(0, 0, 0, 0)" stroke-width="[lane_count]*2.5" stroke-linecap="round" smooth="0.2" />
+    <LineSymbolizer stroke-opacity="0.35" stroke-dasharray="24, 12" stroke="#c9bebe" stroke-width="[lane_count]*2.5" />
+  </Rule>
+</Style>
+<Style name="toporoad-metalled" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([surface] = 'metalled') and ([hway_num] = null)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*6" stroke="rgba(0, 0, 0, 0)" stroke-linecap="round" smooth="0.2" />
+    <LineSymbolizer stroke-opacity="0.35" stroke-dasharray="60, 30" stroke-width="[lane_count]*6" stroke="#c9bebe" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([surface] = 'metalled') and ([hway_num] = null)</Filter>
+    <LineSymbolizer stroke="rgba(0, 0, 0, 0)" stroke-width="[lane_count]*2.5" stroke-linecap="round" smooth="0.2" />
+    <LineSymbolizer stroke-opacity="0.35" stroke-dasharray="24, 12" stroke="#c9bebe" stroke-width="[lane_count]*2.5" />
+  </Rule>
+</Style>
+<Style name="toporoad-mtwyfg" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([hway_num] != null)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*6.5" stroke="#c9bebe" stroke-opacity="1" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([hway_num] != null)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*4.5" stroke="#c9bebe" stroke-opacity="1" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([hway_num] != null)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*1.5" stroke="#c9bebe" stroke-opacity="1" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([hway_num] != null)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*0.5" stroke-opacity="1" stroke="#947e7e" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([hway_num] != null)</Filter>
+    <LineSymbolizer stroke-opacity="1" stroke-width="[lane_count]*0.25" stroke="#947e7e" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([hway_num] != null)</Filter>
+    <LineSymbolizer stroke-opacity="0.75" stroke-width="[lane_count]*0.2" stroke="#878787" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([hway_num] != null)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*0.2" stroke="#878787" stroke-opacity="0.5" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([hway_num] != null)</Filter>
+    <LineSymbolizer stroke="#878787" stroke-width="[lane_count]*0.15" stroke-opacity="0.5" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+</Style>
+<Style name="toporoad-allbg" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([name] != null) and ([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*8" stroke-opacity="1" stroke="#6d7567" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([name] != null) and ([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*6" stroke-opacity="1" stroke="#6d7567" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([name] != null) and ([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*2.5" stroke-opacity="1" stroke="#6d7567" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([name] != null) and ([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke-opacity="0.8" stroke-width="[lane_count]*0.25" stroke="#878787" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([name] != null) and ([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*0.1" stroke="#878787" stroke-opacity="0.5" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([name] != null) and ([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke="#878787" stroke-width="[lane_count]*0.05" stroke-opacity="0.5" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([name] != null)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*8" stroke-opacity="1" stroke="#6d7567" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([name] != null)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*6" stroke-opacity="1" stroke="#6d7567" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([name] != null)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*2.5" stroke-opacity="1" stroke="#6d7567" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([name] != null)</Filter>
+    <LineSymbolizer stroke-opacity="0.8" stroke-width="[lane_count]*0.25" stroke="#878787" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([name] != null)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*0.1" stroke="#878787" stroke-opacity="0.5" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([name] != null)</Filter>
+    <LineSymbolizer stroke="#878787" stroke-width="[lane_count]*0.05" stroke-opacity="0.5" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*8" stroke-opacity="1" stroke="#6d7567" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*6" stroke-opacity="1" stroke="#6d7567" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*2.5" stroke-opacity="1" stroke="#6d7567" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke-opacity="0.8" stroke-width="[lane_count]*0.25" stroke="#878787" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke-width="[lane_count]*0.1" stroke="#878787" stroke-opacity="0.5" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([lane_count] = 1)</Filter>
+    <LineSymbolizer stroke="#878787" stroke-width="[lane_count]*0.05" stroke-opacity="0.5" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="[lane_count]*8" stroke-opacity="1" stroke="#6d7567" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <LineSymbolizer stroke-width="[lane_count]*6" stroke-opacity="1" stroke="#6d7567" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="[lane_count]*2.5" stroke-opacity="1" stroke="#6d7567" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <LineSymbolizer stroke-opacity="0.8" stroke-width="[lane_count]*0.25" stroke="#878787" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="[lane_count]*0.1" stroke="#878787" stroke-opacity="0.5" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <LineSymbolizer stroke="#878787" stroke-width="[lane_count]*0.05" stroke-opacity="0.5" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+</Style>
+<Layer name="toporoad"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>toporoad-allbg</StyleName>
+    <StyleName>toporoad-mtwyfg</StyleName>
+    <StyleName>toporoad-metalled</StyleName>
+    <StyleName>toporoad-unmetalled</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from nz_road_centerlines__topo__1_50k_) as toporoad]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18607124.5876498,-5926890.773,19875465.9554501,-4085085.80879998]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tunnel_topo" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([use1] = 'train')</Filter>
+    <LineSymbolizer stroke-width="25" stroke-opacity="0.25" stroke="#888888" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([use1] = 'train')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-opacity="0.25" stroke="#888888" stroke-linecap="round" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([use1] = 'train')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#888888" stroke-linecap="round" stroke-opacity="0.25" smooth="0.2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="25" stroke="#2a2323" smooth="0.2" stroke-opacity="0.5" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <LineSymbolizer stroke-width="16" stroke="#2a2323" smooth="0.2" stroke-opacity="0.5" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="8" stroke="#2a2323" smooth="0.2" stroke-opacity="0.5" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <LineSymbolizer stroke="#2a2323" stroke-width="2" smooth="0.2" stroke-opacity="0.5" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Layer name="tunnel_topo"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tunnel_topo</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from public.nz_tunnel_centrelines__topo__1_50k_) AS tunnel_topo]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18666828.7718411,-5865062.80303151,19804240.4748565,-4206877.95133478]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="bridge_topo" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([use_1] = 'train')</Filter>
+    <LineSymbolizer offset="12.5" stroke-width="4" stroke="#333333" stroke-linecap="round" />
+    <LineSymbolizer offset="-12.5" stroke-width="4" stroke="#333333" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([use_1] = 'train')</Filter>
+    <LineSymbolizer offset="5" stroke-width="2" stroke="#333333" stroke-linecap="round" />
+    <LineSymbolizer offset="-5" stroke-width="2" stroke="#333333" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([use_1] = 'train')</Filter>
+    <LineSymbolizer offset="3.5" stroke-width="2" stroke="#333333" stroke-linecap="round" />
+    <LineSymbolizer offset="-3.5" stroke-width="2" stroke="#333333" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <LineSymbolizer offset="8" stroke-width="4" stroke="#333333" stroke-linecap="round" />
+    <LineSymbolizer offset="-8" stroke-width="4" stroke="#333333" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <LineSymbolizer offset="5" stroke-width="2" stroke="#333333" stroke-linecap="round" />
+    <LineSymbolizer offset="-5" stroke-width="2" stroke="#333333" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <LineSymbolizer offset="3.5" stroke-width="2" stroke="#333333" stroke-linecap="round" />
+    <LineSymbolizer offset="-3.5" stroke-width="2" stroke="#333333" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Layer name="bridge_topo"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>bridge_topo</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from public.nz_bridge_centrelines__topo__1_50k_) AS bridge_topo]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[18588719.8615001,-5939257.42937042,19869879.1530354,-4093884.06936018]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="hillshademultiplyrep" filter-mode="first" comp-op="overlay">
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <RasterSymbolizer scaling="bilinear" default-mode="linear" default-color="#000000" >
+	<stop value="1" color="#222222" /> 
+	<stop value="255" color="#ebebeb" /></RasterSymbolizer>
+  </Rule>
+</Style>
+<Layer name="hillshademultiplyrep"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>hillshademultiplyrep</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/ireese/Documents/MapBox/project/NZ_Terrain_Natural_Colour/layers/hillshademultiplyrep.vrt]]></Parameter>
+       <Parameter name="band"><![CDATA[1]]></Parameter>
+       <Parameter name="type"><![CDATA[gdal]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="texture" filter-mode="first">
+  <Rule>
+    <PolygonPatternSymbolizer file="/home/ireese/Documents/MapBox/cache/7bb5a467-basetexture.jpg" comp-op="multiply" />
+  </Rule>
+</Style>
+<Layer name="texture"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>texture</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from public.nz_coastlines_and_islands_polygons__topo_1_50k_) AS texture]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-19906876.6508999,-6913176.78084993,19933735.6608,-3405123.73175001]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="dbname"><![CDATA[nz_data]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
